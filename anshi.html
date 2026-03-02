@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Caption Studio | Ansh Yadav Agency</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg: #050508;
+            --card: rgba(255, 255, 255, 0.04);
+            --accent: #00a2ff;
+            --text: #ffffff;
+            --silver: #b0b0b0;
+            --border: rgba(255, 255, 255, 0.1);
+            --glow: rgba(0, 162, 255, 0.15);
+        }
+
+        body.light-mode {
+            --bg: #f8faff;
+            --card: #ffffff;
+            --accent: #0066ff;
+            --text: #1a1a1a;
+            --silver: #555555;
+            --border: rgba(0, 0, 0, 0.08);
+            --glow: rgba(0, 102, 255, 0.08);
+        }
+
+        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Outfit', sans-serif; transition: background 0.4s, color 0.3s; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; line-height: 1.6; }
+
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at 50% 50%, var(--glow) 0%, transparent 75%); pointer-events: none; }
+
+        /* NAVIGATION */
+        nav { position: fixed; top: 0; width: 100%; height: 75px; background: var(--bg); backdrop-filter: blur(20px); display: flex; align-items: center; justify-content: space-between; padding: 0 6%; z-index: 5000; border-bottom: 1px solid var(--border); }
+        .logo { font-weight: 900; color: var(--accent); font-size: 1.1rem; cursor: pointer; letter-spacing: 1px; }
+
+        /* SIDEBAR */
+        #sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100%; background: var(--bg); z-index: 8000; padding: 40px 30px; border-right: 1px solid var(--border); transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1); }
+        #sidebar.active { left: 0; }
+        .sidebar-links { list-style: none; margin-top: 25px; }
+        .sidebar-links li { margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        .sidebar-links a { text-decoration: none; color: var(--text); cursor: pointer; display: block; font-size: 0.95rem; font-weight: 600; }
+        #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 7500; display: none; }
+
+        /* PAGES */
+        .page { display: none; padding: 110px 6% 180px; min-height: 100vh; animation: fadeIn 0.4s ease forwards; max-width: 1200px; margin: 0 auto; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .glass-card { background: var(--card); border: 1px solid var(--border); padding: 25px; border-radius: 20px; margin-bottom: 20px; position: relative; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        
+        .btn { padding: 14px 22px; border-radius: 12px; font-weight: 700; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; transition: 0.3s; }
+        .btn-p { background: var(--accent); color: #fff; box-shadow: 0 8px 15px var(--glow); }
+        .btn-o { border: 1.5px solid var(--accent); color: var(--accent); background: transparent; }
+        .badge { font-size: 0.6rem; background: var(--accent); color: #fff; padding: 4px 10px; border-radius: 5px; font-weight: 900; display: inline-block; margin-bottom: 10px; letter-spacing: 1px; }
+
+        /* CALCULATOR SLIDER */
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; background: var(--border); border-radius: 10px; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; margin-top: -7px; box-shadow: 0 0 10px var(--glow); }
+
+        /* MEGA HOLD BAR */
+        .hold-action-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: var(--bg); border-top: 1px solid var(--border);
+            padding: 20px 6% 15px; z-index: 9000; backdrop-filter: blur(25px);
+        }
+        .hold-container {
+            width: 100%; height: 65px; background: var(--card);
+            border-radius: 18px; border: 1px solid var(--border);
+            position: relative; overflow: hidden; display: flex;
+            align-items: center; justify-content: center; cursor: pointer;
+            user-select: none; -webkit-tap-highlight-color: transparent;
+        }
+        .hold-progress-fill {
+            position: absolute; left: 0; top: 0; height: 100%;
+            width: 0%; background: linear-gradient(90deg, transparent, var(--accent));
+            opacity: 0.4; transition: width 0.1s linear;
+        }
+        .hold-content {
+            z-index: 2; display: flex; align-items: center; gap: 12px;
+            font-weight: 800; font-size: 0.85rem; letter-spacing: 1px;
+            color: var(--text);
+        }
+        .hold-content i { font-size: 1.3rem; color: #25d366; }
+        .holding { animation: shake 0.2s infinite; border-color: var(--accent) !important; }
+        @keyframes shake { 0%, 100% { transform: scale(0.98); } 50% { transform: scale(1); } }
+
+        /* FOOTER */
+        .live-footer { 
+            background: var(--card); border-top: 1px solid var(--border); 
+            padding: 12px 6%; display: flex; justify-content: space-between; 
+            flex-wrap: wrap; font-size: 0.6rem; color: var(--silver); 
+            font-weight: 800; gap: 10px; margin-bottom: 100px;
+        }
+        .status-dot { color: #22c55e; animation: blink 1.5s infinite; margin-right: 5px; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="hold-action-bar">
+        <div class="hold-container" id="mega-hold">
+            <div class="hold-progress-fill" id="fill"></div>
+            <div class="hold-content" id="h-text">
+                <i class="fab fa-whatsapp"></i> 
+                <span>HOLD TIGHT TO CONNECT</span>
+            </div>
+        </div>
+        <p style="font-size: 0.5rem; text-align: center; margin-top: 8px; opacity: 0.6; font-weight: 800;">PRESS & HOLD 1.2s TO OPEN WHATSAPP</p>
+    </div>
+
+    <nav>
+        <div onclick="toggleM()"><i class="fas fa-bars-staggered" style="font-size:1.2rem; cursor:pointer;"></i></div>
+        <div class="logo" onclick="navTo('home')">CAPTION STUDIO</div>
+        <div class="nav-right" onclick="toggleT()" style="cursor:pointer; font-size: 1.2rem; color: var(--accent);"><i class="fas fa-moon" id="t-icon"></i></div>
+    </nav>
+
+    <div id="overlay" onclick="toggleM()"></div>
+    <div id="sidebar">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-weight:900; color:var(--accent); font-size:0.7rem; letter-spacing:2px;">AGENCY MENU</span>
+            <i class="fas fa-times" onclick="toggleM()" style="cursor:pointer;"></i>
+        </div>
+        <ul class="sidebar-links">
+            <li><a onclick="navTo('home')">Home</a></li>
+            <li><a onclick="navTo('free-vault')">Free Vault</a></li>
+            <li><a onclick="navTo('social')">Growth Plans</a></li>
+            <li><a onclick="navTo('founder')">The Founder</a></li>
+        </ul>
+    </div>
+
+    <main id="home" class="page active">
+        <div style="text-align:center;">
+            <span class="badge">#1 CONTENT AGENCY | SAHJANWA</span>
+            <h1 style="font-size:3.2rem; font-weight:900; line-height:1; margin: 15px 0;">Scale Your <br><span style="color:var(--accent)">Influence.</span></h1>
+            
+            <div class="glass-card" style="margin-top: 40px; border: 1px solid var(--accent); text-align: left;">
+                <h4 style="color:var(--accent); margin-bottom: 5px;"><i class="fas fa-chart-line"></i> Growth Predictor</h4>
+                <p style="font-size: 0.65rem; color: var(--silver); margin-bottom: 15px;">Drag to see your potential reach with our captions.</p>
+                <input type="range" id="followerRange" min="100" max="10000" value="500">
+                <div style="display: flex; justify-content: space-between; font-weight: 900; font-size: 0.85rem; margin-top: 15px;">
+                    <span>FOLLOWERS: <span id="fCount" style="color:var(--accent)">500</span></span>
+                    <span style="color: #22c55e;">EST. REACH: <span id="rCount">2,500</span>+</span>
+                </div>
+            </div>
+
+            <div style="display:grid; gap:12px; margin-top: 25px;">
+                <button onclick="navTo('free-vault')" class="btn btn-p">Get Free Samples</button>
+                <button onclick="navTo('social')" class="btn btn-o">View Paid Plans</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px;">
+            <h3 style="text-align: center; margin-bottom: 25px;">The <span style="color:var(--accent)">Transformation</span></h3>
+            <div class="grid">
+                <div class="glass-card" style="opacity: 0.5;">
+                    <span class="badge" style="background:#ff4444;">BEFORE</span>
+                    <p style="font-size: 0.75rem; font-weight:600;">"Follow me for tips. Checkout my new post. #business #entrepreneur"</p>
+                </div>
+                <div class="glass-card" style="border: 1px solid #22c55e;">
+                    <span class="badge" style="background:#22c55e;">AFTER BY ANSH</span>
+                    <p style="font-size: 0.75rem; font-weight:600;">"Stop chasing likes. Start building a legacy. 🚀 Here's the 3-step math to your first 10k."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="free-vault" class="page">
+        <div onclick="navTo('home')" style="color:var(--accent); cursor:pointer; font-weight:800; margin-bottom:20px; font-size: 0.7rem;"><i class="fas fa-arrow-left"></i> BACK</div>
+        <h2>The Free <span>Vault</span></h2>
+        <div class="grid">
+            <div class="glass-card">
+                <span class="badge">HOOK #1</span>
+                <p style="font-size: 0.85rem; font-weight:700;">"Your environment is either making you or breaking you. Choose the right room."</p>
+                <button class="btn btn-o" style="margin-top:15px; padding:8px; font-size:0.7rem;" onclick="alert('Copied!')">Copy Hook</button>
+            </div>
+        </div>
+    </main>
+
+    <main id="social" class="page">
+        <div onclick="navTo('home')" style="color:var(--accent); cursor:pointer; font-weight:800; margin-bottom:20px; font-size: 0.7rem;"><i class="fas fa-arrow-left"></i> BACK</div>
+        <h2>Growth Plans</h2>
+        <div class="grid">
+            <div class="glass-card" style="border: 2px solid var(--accent);">
+                <div style="font-size: 2.2rem; font-weight: 900; color: var(--accent);">₹999</div>
+                <p style="font-size: 0.8rem; margin: 10px 0;">10 Premium Captions + Viral Hooks.</p>
+                <button onclick="book('Starter','999')" class="btn btn-p">Book Now</button>
+            </div>
+        </div>
+    </main>
+
+    <main id="founder" class="page">
+        <div onclick="navTo('home')" style="color:var(--accent); cursor:pointer; font-weight:800; margin-bottom:20px; font-size: 0.7rem;"><i class="fas fa-arrow-left"></i> BACK</div>
+        <div class="glass-card" style="text-align: center;">
+            <div style="width:110px; height:110px; border:3px solid var(--accent); border-radius:50%; margin:0 auto 15px; padding:4px;">
+                <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+            </div>
+            <h3>Ansh Yadav</h3>
+            <p style="color:var(--accent); font-weight:900; font-size:0.7rem; letter-spacing:2px;">MATH GRADUATE | STRATEGIST</p>
+            <p style="font-size:0.85rem; color:var(--silver); margin-top:15px;">"Content is an equation. I help you find the 'X' that leads to growth."</p>
+        </div>
+    </main>
+
+    <div class="live-footer">
+        <div><i class="fas fa-circle status-dot"></i> SYSTEM ACTIVE</div>
+        <div id="ft-date">02 MAR 2026</div>
+        <div id="ft-time">11:00:00</div>
+        <div>SAHJANWA, UP</div>
+    </div>
+
+    <footer style="padding: 30px 6%; text-align: center; opacity:0.3; font-size:0.6rem; letter-spacing:1px;">
+        <p>© 2026 ANISH YADAV | CAPTION STUDIO AGENCY</p>
+    </footer>
+
+    <script>
+        function toggleM() {
+            const s = document.getElementById('sidebar'), o = document.getElementById('overlay');
+            s.classList.toggle('active');
+            o.style.display = s.classList.contains('active') ? 'block' : 'none';
+        }
+        function navTo(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            if(document.getElementById('sidebar').classList.contains('active')) toggleM();
+            window.scrollTo(0,0);
+        }
+        function toggleT() {
+            document.body.classList.toggle('light-mode');
+            document.getElementById('t-icon').className = document.body.classList.contains('light-mode') ? "fas fa-sun" : "fas fa-moon";
+        }
+
+        // Calculator Logic
+        const range = document.getElementById('followerRange');
+        range.addEventListener('input', function() {
+            const val = this.value;
+            document.getElementById('fCount').innerText = Number(val).toLocaleString();
+            document.getElementById('rCount').innerText = (val * 5).toLocaleString();
+        });
+
+        // Live Footer
+        function updateLive() {
+            const now = new Date();
+            document.getElementById('ft-time').innerText = now.toLocaleTimeString('en-GB');
+            document.getElementById('ft-date').innerText = now.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}).toUpperCase();
+        }
+        setInterval(updateLive, 1000); updateLive();
+
+        // MEGA HOLD LOGIC
+        const megaBtn = document.getElementById('mega-hold');
+        const fill = document.getElementById('fill');
+        let holdTimer, progress = 0;
+        const duration = 1200; 
+
+        function startHold(e) {
+            if(e.cancelable) e.preventDefault();
+            progress = 0;
+            megaBtn.classList.add('holding');
+            holdTimer = setInterval(() => {
+                progress += 20;
+                let percent = (progress / duration) * 100;
+                fill.style.width = percent + "%";
+                if (progress >= duration) {
+                    clearInterval(holdTimer);
+                    window.open("https://wa.me/919918996096?text=Hi Ansh, Growth Predicted! I'm ready.", "_blank");
+                    resetHold();
+                }
+            }, 20);
+        }
+        function resetHold() {
+            clearInterval(holdTimer); progress = 0;
+            fill.style.width = "0%";
+            megaBtn.classList.remove('holding');
+        }
+
+        megaBtn.addEventListener('mousedown', startHold);
+        megaBtn.addEventListener('mouseup', resetHold);
+        megaBtn.addEventListener('mouseleave', resetHold);
+        megaBtn.addEventListener('touchstart', startHold, {passive: false});
+        megaBtn.addEventListener('touchend', resetHold);
+
+        function book(p, pr) { window.open(`https://wa.me/919918996096?text=Interested in ${p}`, '_blank'); }
+    </script>
+</body>
+</html>
