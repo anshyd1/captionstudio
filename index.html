@@ -1,293 +1,353 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Caption Studio | Ansh Yadav Agency</title>
+    <title>Caption Studio | Elite Personal Branding</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Psychological content engineering to turn silence into sales. Elite personal branding by Ansh Yadav.">
+    <meta property="og:title" content="Caption Studio | Elite Personal Branding">
+    <meta property="og:image" content="https://i.ibb.co/dwhXTRz6/ansh.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --bg: #050508;
-            --card: rgba(255, 255, 255, 0.04);
+            --bg: #030305;
+            --card: rgba(255, 255, 255, 0.03);
             --accent: #00a2ff;
+            --accent-glow: rgba(0, 162, 255, 0.3);
             --text: #ffffff;
-            --silver: #b0b0b0;
-            --border: rgba(255, 255, 255, 0.1);
-            --glow: rgba(0, 162, 255, 0.15);
+            --silver: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --gradient: linear-gradient(135deg, #00a2ff 0%, #0066ff 100%);
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         body.light-mode {
-            --bg: #f8faff;
-            --card: #ffffff;
+            --bg: #f8fafc;
+            --card: rgba(0, 0, 0, 0.03);
             --accent: #0066ff;
-            --text: #1a1a1a;
-            --silver: #555555;
+            --accent-glow: rgba(0, 102, 255, 0.1);
+            --text: #0f172a;
+            --silver: #64748b;
             --border: rgba(0, 0, 0, 0.08);
-            --glow: rgba(0, 102, 255, 0.08);
         }
 
-        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Outfit', sans-serif; transition: background 0.4s, color 0.3s; }
-        body { background: var(--bg); color: var(--text); overflow-x: hidden; line-height: 1.6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { 
+            background: var(--bg); 
+            color: var(--text); 
+            overflow-x: hidden; 
+            transition: background 0.6s ease; 
+            -webkit-tap-highlight-color: transparent;
+            line-height: 1.6;
+        }
 
-        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: radial-gradient(circle at 50% 50%, var(--glow) 0%, transparent 75%); pointer-events: none; }
+        /* --- GPU ACCELERATED BACKGROUND --- */
+        .bg-layer { position: fixed; inset: 0; z-index: -1; pointer-events: none; transform: translateZ(0); }
+        .blob { 
+            position: absolute; border-radius: 50%; filter: blur(100px); 
+            opacity: 0.15; animation: float 20s infinite alternate ease-in-out; 
+            will-change: transform;
+        }
+        @keyframes float { 
+            0% { transform: translate3d(0, 0, 0) scale(1); } 
+            100% { transform: translate3d(100px, 50px, 0) scale(1.2); } 
+        }
 
-        /* NAVIGATION */
-        nav { position: fixed; top: 0; width: 100%; height: 75px; background: var(--bg); backdrop-filter: blur(20px); display: flex; align-items: center; justify-content: space-between; padding: 0 6%; z-index: 5000; border-bottom: 1px solid var(--border); }
-        .logo { font-weight: 900; color: var(--accent); font-size: 1.1rem; cursor: pointer; letter-spacing: 1px; }
+        /* --- HEADER --- */
+        header {
+            position: fixed; top: 0; width: 100%; height: 80px;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 6%; z-index: 1000; transition: var(--transition);
+            background: rgba(var(--bg), 0.01); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        header.scrolled { height: 65px; background: var(--bg); }
 
-        /* SIDEBAR */
-        #sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100%; background: var(--bg); z-index: 8000; padding: 40px 30px; border-right: 1px solid var(--border); transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1); }
-        #sidebar.active { left: 0; }
-        .sidebar-links { list-style: none; margin-top: 25px; }
-        .sidebar-links li { margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        .sidebar-links a { text-decoration: none; color: var(--text); cursor: pointer; display: block; font-size: 0.95rem; font-weight: 600; }
-        #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 7500; display: none; }
+        .nav-btn { 
+            width: 44px; height: 44px; border-radius: 12px; background: var(--card);
+            border: 1px solid var(--border); color: var(--text); cursor: pointer;
+            display: flex; align-items: center; justify-content: center; transition: 0.3s;
+        }
+        .nav-btn:active { transform: scale(0.9); }
 
-        /* PAGES */
-        .page { display: none; padding: 110px 6% 180px; min-height: 100vh; animation: fadeIn 0.4s ease forwards; max-width: 1200px; margin: 0 auto; }
-        .page.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* --- HERO --- */
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 8%; }
+        .hero-h1 { font-size: clamp(3rem, 10vw, 6.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -2px; }
+        .hero-h1 span { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .type-cursor { animation: blink 0.9s infinite; font-weight: 200; color: var(--accent); }
+        @keyframes blink { 50% { opacity: 0; } }
 
-        .glass-card { background: var(--card); border: 1px solid var(--border); padding: 25px; border-radius: 20px; margin-bottom: 20px; position: relative; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        /* --- GRID & CARDS --- */
+        .section-wrap { width: 100%; max-width: 1200px; margin: 0 auto; padding: 100px 6%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+
+        .glass-card { 
+            background: var(--card); border: 1px solid var(--border); border-radius: 28px; 
+            padding: 40px; transition: var(--transition); 
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+            position: relative; will-change: transform;
+        }
         
-        .btn { padding: 14px 22px; border-radius: 12px; font-weight: 700; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; transition: 0.3s; }
-        .btn-p { background: var(--accent); color: #fff; box-shadow: 0 8px 15px var(--glow); }
-        .btn-o { border: 1.5px solid var(--accent); color: var(--accent); background: transparent; }
-        .badge { font-size: 0.6rem; background: var(--accent); color: #fff; padding: 4px 10px; border-radius: 5px; font-weight: 900; display: inline-block; margin-bottom: 10px; letter-spacing: 1px; }
+        .img-box { 
+            width: 100%; border-radius: 18px; overflow: hidden; margin-bottom: 25px; 
+            border: 1px solid var(--border); background: #000;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .img-box img { width: 100%; height: auto; max-height: 450px; object-fit: contain; display: block; }
 
-        /* CALCULATOR SLIDER */
-        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
-        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; background: var(--border); border-radius: 10px; }
-        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: var(--accent); cursor: pointer; margin-top: -7px; box-shadow: 0 0 10px var(--glow); }
+        /* --- REVEAL ANIMATION --- */
+        .reveal { opacity: 0; transform: translate3d(0, 40px, 0); transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translate3d(0, 0, 0); }
 
-        /* MEGA HOLD BAR */
-        .hold-action-bar {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            background: var(--bg); border-top: 1px solid var(--border);
-            padding: 20px 6% 15px; z-index: 9000; backdrop-filter: blur(25px);
+        /* --- HOLD BUTTON --- */
+        .hold-btn { 
+            width: 100%; max-width: 380px; height: 75px; background: var(--card); border: 1px solid var(--border);
+            border-radius: 20px; position: relative; overflow: hidden; cursor: pointer; margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        .hold-container {
-            width: 100%; height: 65px; background: var(--card);
-            border-radius: 18px; border: 1px solid var(--border);
-            position: relative; overflow: hidden; display: flex;
-            align-items: center; justify-content: center; cursor: pointer;
-            user-select: none; -webkit-tap-highlight-color: transparent;
-        }
-        .hold-progress-fill {
-            position: absolute; left: 0; top: 0; height: 100%;
-            width: 0%; background: linear-gradient(90deg, transparent, var(--accent));
-            opacity: 0.4; transition: width 0.1s linear;
-        }
-        .hold-content {
-            z-index: 2; display: flex; align-items: center; gap: 12px;
-            font-weight: 800; font-size: 0.85rem; letter-spacing: 1px;
-            color: var(--text);
-        }
-        .hold-content i { font-size: 1.3rem; color: #25d366; }
-        .holding { animation: shake 0.2s infinite; border-color: var(--accent) !important; }
-        @keyframes shake { 0%, 100% { transform: scale(0.98); } 50% { transform: scale(1); } }
+        .hold-fill { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--gradient); transition: 0.1s linear; z-index: 1; }
+        .hold-text { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; z-index: 2; pointer-events: none; letter-spacing: 1px; }
 
-        /* FOOTER */
-        .live-footer { 
-            background: var(--card); border-top: 1px solid var(--border); 
-            padding: 12px 6%; display: flex; justify-content: space-between; 
-            flex-wrap: wrap; font-size: 0.6rem; color: var(--silver); 
-            font-weight: 800; gap: 10px; margin-bottom: 100px;
+        /* --- FAQ --- */
+        .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 20px; margin-bottom: 15px; transition: 0.3s; }
+        .faq-q { padding: 22px; cursor: pointer; display: flex; justify-content: space-between; font-weight: 700; align-items: center; }
+        .faq-a { max-height: 0; opacity: 0; padding: 0 22px; color: var(--silver); transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1); overflow: hidden; }
+        .faq-item.active { border-color: var(--accent); }
+        .faq-item.active .faq-a { max-height: 200px; opacity: 1; padding-bottom: 22px; }
+
+        /* --- SIDEBAR --- */
+        #sidebar { 
+            position: fixed; top: 0; left: 0; width: 320px; height: 100%; 
+            background: var(--bg); z-index: 2000; transform: translate3d(-100%, 0, 0);
+            transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1);
+            padding: 50px 35px; border-right: 1px solid var(--border);
         }
-        .status-dot { color: #22c55e; animation: blink 1.5s infinite; margin-right: 5px; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        #sidebar.active { transform: translate3d(0, 0, 0); }
+
+        /* --- RESPONSIVE TYPOGRAPHY --- */
+        @media (max-width: 768px) { 
+            .hero-h1 { font-size: 3.5rem; } 
+            .section-wrap { padding: 60px 6%; }
+            .grid { grid-template-columns: 1fr; }
+            #sidebar { width: 85%; }
+        }
     </style>
 </head>
-<body>
+<body class="dark-mode" oncontextmenu="return false;">
 
-    <div class="bg-glow"></div>
-
-    <div class="hold-action-bar">
-        <div class="hold-container" id="mega-hold">
-            <div class="hold-progress-fill" id="fill"></div>
-            <div class="hold-content" id="h-text">
-                <i class="fab fa-whatsapp"></i> 
-                <span>HOLD TIGHT TO CONNECT</span>
-            </div>
-        </div>
-        <p style="font-size: 0.5rem; text-align: center; margin-top: 8px; opacity: 0.6; font-weight: 800;">PRESS & HOLD 1.2s TO OPEN WHATSAPP</p>
+    <div class="bg-layer">
+        <div class="blob" style="width: 500px; height: 500px; background: radial-gradient(circle, var(--accent) 0%, transparent 70%); top: -5%; right: -5%;"></div>
+        <div class="blob" style="width: 400px; height: 400px; background: radial-gradient(circle, #7000ff 0%, transparent 70%); bottom: -5%; left: -5%;"></div>
     </div>
 
-    <nav>
-        <div onclick="toggleM()"><i class="fas fa-bars-staggered" style="font-size:1.2rem; cursor:pointer;"></i></div>
-        <div class="logo" onclick="navTo('home')">CAPTION STUDIO</div>
-        <div class="nav-right" onclick="toggleT()" style="cursor:pointer; font-size: 1.2rem; color: var(--accent);"><i class="fas fa-moon" id="t-icon"></i></div>
-    </nav>
+    <header id="navbar">
+        <button class="nav-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars-staggered"></i></button>
+        <div style="font-weight:900; letter-spacing:4px; font-size: 0.9rem;">CAPTION STUDIO</div>
+        <button class="nav-btn" onclick="toggleTheme()" id="t-btn"><i class="fas fa-moon"></i></button>
+    </header>
 
-    <div id="overlay" onclick="toggleM()"></div>
-    <div id="sidebar">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="font-weight:900; color:var(--accent); font-size:0.7rem; letter-spacing:2px;">AGENCY MENU</span>
-            <i class="fas fa-times" onclick="toggleM()" style="cursor:pointer;"></i>
+    <div class="overlay" id="overlay" onclick="toggleMenu()" style="position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:1500; opacity:0; visibility:hidden; transition:0.4s; backdrop-filter: blur(8px);"></div>
+    
+    <aside id="sidebar">
+        <nav style="display:flex; flex-direction:column; gap:30px;">
+            <a href="#home" onclick="toggleMenu()" style="text-decoration:none; color:inherit; font-weight:800; font-size:1.6rem;">Home</a>
+            <a href="#services" onclick="toggleMenu()" style="text-decoration:none; color:inherit; font-weight:800; font-size:1.6rem;">What We Do</a>
+            <a href="#how" onclick="toggleMenu()" style="text-decoration:none; color:inherit; font-weight:800; font-size:1.6rem;">How We Do It</a>
+            <a href="#proofs" onclick="toggleMenu()" style="text-decoration:none; color:inherit; font-weight:800; font-size:1.6rem;">Evidence</a>
+            <a href="https://wa.me/919918996096?text=Free%20Caption" style="text-decoration:none; color:var(--accent); font-weight:900; font-size:1.6rem;">Free Caption</a>
+        </nav>
+        <div style="margin-top:auto; text-align:center; padding-top:40px;">
+            <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" style="width:80px; height:80px; border-radius:50%; border:3px solid var(--accent); object-fit: cover;">
+            <p style="font-weight:900; margin-top:12px; font-size: 1.2rem;">Ansh Yadav</p>
+            <p style="font-size: 0.8rem; color: var(--silver);">Founder & Strategist</p>
         </div>
-        <ul class="sidebar-links">
-            <li><a onclick="navTo('home')">Home</a></li>
-            <li><a onclick="navTo('free-vault')">Free Vault</a></li>
-            <li><a onclick="navTo('social')">Growth Plans</a></li>
-            <li><a onclick="navTo('founder')">The Founder</a></li>
-        </ul>
-    </div>
+    </aside>
 
-    <main id="home" class="page active">
-        <div style="text-align:center;">
-            <span class="badge">#1 CONTENT AGENCY | SAHJANWA</span>
-            <h1 style="font-size:3.2rem; font-weight:900; line-height:1; margin: 15px 0;">Scale Your <br><span style="color:var(--accent)">Influence.</span></h1>
-            
-            <div class="glass-card" style="margin-top: 40px; border: 1px solid var(--accent); text-align: left;">
-                <h4 style="color:var(--accent); margin-bottom: 5px;"><i class="fas fa-chart-line"></i> Growth Predictor</h4>
-                <p style="font-size: 0.65rem; color: var(--silver); margin-bottom: 15px;">Drag to see your potential reach with our captions.</p>
-                <input type="range" id="followerRange" min="100" max="10000" value="500">
-                <div style="display: flex; justify-content: space-between; font-weight: 900; font-size: 0.85rem; margin-top: 15px;">
-                    <span>FOLLOWERS: <span id="fCount" style="color:var(--accent)">500</span></span>
-                    <span style="color: #22c55e;">EST. REACH: <span id="rCount">2,500</span>+</span>
-                </div>
-            </div>
+    <main>
+        <section class="hero" id="home">
+            <h1 class="hero-h1">Content that<br><span id="type-text"></span><span class="type-cursor">|</span></h1>
+            <p style="color:var(--silver); margin-top:25px; max-width:550px; font-size: 1.1rem; font-weight: 300;">Psychological content engineering for elite personal brands. Turning quiet profiles into noisy authority.</p>
+        </section>
 
-            <div style="display:grid; gap:12px; margin-top: 25px;">
-                <button onclick="navTo('free-vault')" class="btn btn-p">Get Free Samples</button>
-                <button onclick="navTo('social')" class="btn btn-o">View Paid Plans</button>
-            </div>
-        </div>
-
-        <div style="margin-top: 60px;">
-            <h3 style="text-align: center; margin-bottom: 25px;">The <span style="color:var(--accent)">Transformation</span></h3>
+        <section class="section-wrap" id="services">
+            <h2 class="reveal" style="margin-bottom:60px; font-size: 2.5rem; font-weight: 900;">What We <span>Do.</span></h2>
             <div class="grid">
-                <div class="glass-card" style="opacity: 0.5;">
-                    <span class="badge" style="background:#ff4444;">BEFORE</span>
-                    <p style="font-size: 0.75rem; font-weight:600;">"Follow me for tips. Checkout my new post. #business #entrepreneur"</p>
+                <div class="glass-card reveal tilt-me">
+                    <i class="fas fa-pen-nib" style="font-size:2rem; color:var(--accent); margin-bottom:20px;"></i>
+                    <h3 style="margin-bottom:12px;">Psychological Ghostwriting</h3>
+                    <p style="color:var(--silver);">Captions aren't just words; they're triggers. We mirror your unique voice while embedding neuromarketing hooks that force stop-scrolling behavior.</p>
                 </div>
-                <div class="glass-card" style="border: 1px solid #22c55e;">
-                    <span class="badge" style="background:#22c55e;">AFTER BY ANSH</span>
-                    <p style="font-size: 0.75rem; font-weight:600;">"Stop chasing likes. Start building a legacy. 🚀 Here's the 3-step math to your first 10k."</p>
+                <div class="glass-card reveal tilt-me">
+                    <i class="fas fa-chess-king" style="font-size:2rem; color:#7000ff; margin-bottom:20px;"></i>
+                    <h3 style="margin-bottom:12px;">Authority Positioning</h3>
+                    <p style="color:var(--silver);">We transition you from being a "creator" to a "Category King." Data-driven pillars designed to attract high-ticket clients, not just random views.</p>
+                </div>
+                <div class="glass-card reveal tilt-me">
+                    <i class="fas fa-chart-line" style="font-size:2rem; color:var(--accent); margin-bottom:20px;"></i>
+                    <h3 style="margin-bottom:12px;">Retention Engineering</h3>
+                    <p style="color:var(--silver);">Every sentence is optimized for the algorithm's "time-on-page" metric. We turn followers into fans and fans into revenue.</p>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <main id="free-vault" class="page">
-        <div onclick="navTo('home')" style="color:var(--accent); cursor:pointer; font-weight:800; margin-bottom:20px; font-size: 0.7rem;"><i class="fas fa-arrow-left"></i> BACK</div>
-        <h2>The Free <span>Vault</span></h2>
-        <div class="grid">
-            <div class="glass-card">
-                <span class="badge">HOOK #1</span>
-                <p style="font-size: 0.85rem; font-weight:700;">"Your environment is either making you or breaking you. Choose the right room."</p>
-                <button class="btn btn-o" style="margin-top:15px; padding:8px; font-size:0.7rem;" onclick="alert('Copied!')">Copy Hook</button>
+        <section class="section-wrap" id="how">
+            <h2 class="reveal" style="text-align:center; margin-bottom:60px; font-size: 2.5rem; font-weight: 900;">How We <span>Do It.</span></h2>
+            <div style="max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 25px;">
+                <div class="glass-card reveal" style="display: flex; align-items: flex-start; gap: 25px; padding: 35px;">
+                    <div style="font-size: 2.5rem; font-weight: 900; color: var(--accent); opacity: 0.2; line-height: 1;">01</div>
+                    <div>
+                        <h3 style="margin-bottom:8px;">The DNA Extraction</h3>
+                        <p style="color: var(--silver);">A deep audit of your past wins, core values, and communication style. We don't write for you; we write AS you.</p>
+                    </div>
+                </div>
+                <div class="glass-card reveal" style="display: flex; align-items: flex-start; gap: 25px; padding: 35px; border-color: var(--accent);">
+                    <div style="font-size: 2.5rem; font-weight: 900; color: var(--accent); opacity: 0.2; line-height: 1;">02</div>
+                    <div>
+                        <h3 style="margin-bottom:8px;">The Hook Framework</h3>
+                        <p style="color: var(--silver);">Engineering the first 2 seconds of every post. We use negative-bias, curiosity-gap, and outcome-based hooks to dominate the feed.</p>
+                    </div>
+                </div>
+                <div class="glass-card reveal" style="display: flex; align-items: flex-start; gap: 25px; padding: 35px;">
+                    <div style="font-size: 2.5rem; font-weight: 900; color: var(--accent); opacity: 0.2; line-height: 1;">03</div>
+                    <div>
+                        <h3 style="margin-bottom:8px;">Ghost-to-Post Execution</h3>
+                        <p style="color: var(--silver);">Ready-to-publish elite captions delivered to you. No friction, no writer's block—just consistent, high-impact growth.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <main id="social" class="page">
-        <div onclick="navTo('home')" style="color:var(--accent); cursor:pointer; font-weight:800; margin-bottom:20px; font-size: 0.7rem;"><i class="fas fa-arrow-left"></i> BACK</div>
-        <h2>Growth Plans</h2>
-        <div class="grid">
-            <div class="glass-card" style="border: 2px solid var(--accent);">
-                <div style="font-size: 2.2rem; font-weight: 900; color: var(--accent);">₹999</div>
-                <p style="font-size: 0.8rem; margin: 10px 0;">10 Premium Captions + Viral Hooks.</p>
-                <button onclick="book('Starter','999')" class="btn btn-p">Book Now</button>
+        <section class="section-wrap" id="proofs">
+            <h2 class="reveal" style="text-align:center; margin-bottom:60px; font-size: 2.5rem; font-weight: 900;">Evidence<span>.</span></h2>
+            <div class="grid">
+                <div class="glass-card reveal tilt-me">
+                    <div class="img-box">
+                        <img src="https://i.ibb.co/jv7SzYqn/Screenshot-2026-02-07-19-08-22-77-99c04817c0de5652397fc8b56c3b3817.jpg" loading="lazy">
+                    </div>
+                    <h3 style="color:var(--accent);">+48.4k Reach</h3>
+                </div>
+                <div class="glass-card reveal tilt-me">
+                    <div class="img-box">
+                        <img src="https://i.ibb.co/tM9rbD3j/Screenshot-2026-02-07-19-09-32-65-99c04817c0de5652397fc8b56c3b3817.jpg" loading="lazy">
+                    </div>
+                    <h3 style="color:var(--accent);">2100% Growth</h3>
+                </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <main id="founder" class="page">
-        <div onclick="navTo('home')" style="color:var(--accent); cursor:pointer; font-weight:800; margin-bottom:20px; font-size: 0.7rem;"><i class="fas fa-arrow-left"></i> BACK</div>
-        <div class="glass-card" style="text-align: center;">
-            <div style="width:110px; height:110px; border:3px solid var(--accent); border-radius:50%; margin:0 auto 15px; padding:4px;">
-                <img src="ansh.jpg" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
+        <section class="section-wrap" id="faq">
+            <h2 class="reveal" style="margin-bottom:40px; font-size: 2rem; font-weight: 900;">Common Queries<span>.</span></h2>
+            <div class="faq-item reveal">
+                <div class="faq-q" onclick="toggleFaq(this)">How long until I see results? <i class="fas fa-plus" style="font-size:0.8rem;"></i></div>
+                <div class="faq-a">Most accounts see a "Hook Lift" (increased reach) within the first 7 days, and meaningful follower growth by week 3.</div>
             </div>
-            <h3>Ansh Yadav</h3>
-            <p style="color:var(--accent); font-weight:900; font-size:0.7rem; letter-spacing:2px;">MATH GRADUATE | STRATEGIST</p>
-            <p style="font-size:0.85rem; color:var(--silver); margin-top:15px;">"Content is an equation. I help you find the 'X' that leads to growth."</p>
-        </div>
+            <div class="faq-item reveal">
+                <div class="faq-q" onclick="toggleFaq(this)">Is this just for Instagram? <i class="fas fa-plus" style="font-size:0.8rem;"></i></div>
+                <div class="faq-a">We specialize in Instagram, LinkedIn, and X—wherever authority-based personal branding is built.</div>
+            </div>
+            <div class="faq-item reveal">
+                <div class="faq-q" onclick="toggleFaq(this)">Can I get a free sample? <i class="fas fa-plus" style="font-size:0.8rem;"></i></div>
+                <div class="faq-a">Yes. Use the button below to hold and start your audit. I'll provide one custom hook for free.</div>
+            </div>
+        </section>
+
+        <section class="section-wrap" style="text-align:center;">
+            <div class="reveal">
+                <div class="hold-btn" id="h-trigger">
+                    <div class="hold-fill" id="h-fill"></div>
+                    <div class="hold-text">HOLD TO START AUDIT <i class="fas fa-fingerprint" style="margin-left:10px;"></i></div>
+                </div>
+                <p style="margin-top:20px; font-size:0.8rem; color:var(--silver); letter-spacing:1px;">LOCKED FOR SERIOUS BRANDS ONLY</p>
+            </div>
+        </section>
     </main>
 
-    <div class="live-footer">
-        <div><i class="fas fa-circle status-dot"></i> SYSTEM ACTIVE</div>
-        <div id="ft-date">02 MAR 2026</div>
-        <div id="ft-time">11:00:00</div>
-        <div>SAHJANWA, UP</div>
-    </div>
-
-    <footer style="padding: 30px 6%; text-align: center; opacity:0.3; font-size:0.6rem; letter-spacing:1px;">
-        <p>© 2026 ANISH YADAV | CAPTION STUDIO AGENCY</p>
+    <footer style="padding:80px 20px; text-align:center; border-top:1px solid var(--border);">
+        <div style="display:flex; justify-content:center; gap:30px; margin-bottom:40px;">
+            <a href="https://instagram.com/captionstudi.o" class="nav-btn" style="width:55px; height:55px; font-size:1.5rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919918996096" class="nav-btn" style="width:55px; height:55px; font-size:1.5rem;"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div id="timer" style="font-weight:900; letter-spacing:3px; opacity:0.6;">00:00:00</div>
+        <p style="opacity:0.3; font-size:0.7rem; margin-top:20px;">© 2026 CAPTION STUDIO • BY ANSH YADAV</p>
     </footer>
 
     <script>
-        function toggleM() {
-            const s = document.getElementById('sidebar'), o = document.getElementById('overlay');
-            s.classList.toggle('active');
-            o.style.display = s.classList.contains('active') ? 'block' : 'none';
+        // TYPE ANIMATION
+        const words = ["Rules the Feed.", "Builds Empires.", "Converts Fans."];
+        let wordIdx = 0, charIdx = 0, deleting = false;
+        function type() {
+            const target = document.getElementById('type-text');
+            const current = words[wordIdx];
+            target.textContent = deleting ? current.substring(0, charIdx--) : current.substring(0, charIdx++);
+            let speed = deleting ? 50 : 120;
+            if(!deleting && charIdx === current.length + 1) { deleting = true; speed = 2000; }
+            else if(deleting && charIdx === 0) { deleting = false; wordIdx = (wordIdx + 1) % words.length; speed = 500; }
+            setTimeout(type, speed);
         }
-        function navTo(id) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            if(document.getElementById('sidebar').classList.contains('active')) toggleM();
-            window.scrollTo(0,0);
+        type();
+
+        // SMOOTH 3D TILT
+        if(window.innerWidth > 1024) {
+            document.addEventListener('mousemove', (e) => {
+                document.querySelectorAll('.tilt-me').forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const dx = (e.clientX - (rect.left + rect.width/2)) / 30;
+                    const dy = (e.clientY - (rect.top + rect.height/2)) / 30;
+                    card.style.transform = `perspective(1000px) rotateY(${dx}deg) rotateX(${-dy}deg) translateZ(10px)`;
+                });
+            });
         }
-        function toggleT() {
+
+        // MENU LOGIC
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            const o = document.getElementById('overlay');
+            const isActive = document.getElementById('sidebar').classList.contains('active');
+            o.style.opacity = isActive ? '1' : '0';
+            o.style.visibility = isActive ? 'visible' : 'hidden';
+        }
+
+        function toggleTheme() { 
             document.body.classList.toggle('light-mode');
-            document.getElementById('t-icon').className = document.body.classList.contains('light-mode') ? "fas fa-sun" : "fas fa-moon";
+            const icon = document.querySelector('#t-btn i');
+            icon.className = document.body.classList.contains('light-mode') ? 'fas fa-sun' : 'fas fa-moon';
         }
 
-        // Calculator Logic
-        const range = document.getElementById('followerRange');
-        range.addEventListener('input', function() {
-            const val = this.value;
-            document.getElementById('fCount').innerText = Number(val).toLocaleString();
-            document.getElementById('rCount').innerText = (val * 5).toLocaleString();
-        });
-
-        // Live Footer
-        function updateLive() {
-            const now = new Date();
-            document.getElementById('ft-time').innerText = now.toLocaleTimeString('en-GB');
-            document.getElementById('ft-date').innerText = now.toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}).toUpperCase();
-        }
-        setInterval(updateLive, 1000); updateLive();
-
-        // MEGA HOLD LOGIC
-        const megaBtn = document.getElementById('mega-hold');
-        const fill = document.getElementById('fill');
-        let holdTimer, progress = 0;
-        const duration = 1200; 
-
-        function startHold(e) {
-            if(e.cancelable) e.preventDefault();
-            progress = 0;
-            megaBtn.classList.add('holding');
-            holdTimer = setInterval(() => {
-                progress += 20;
-                let percent = (progress / duration) * 100;
-                fill.style.width = percent + "%";
-                if (progress >= duration) {
-                    clearInterval(holdTimer);
-                    window.open("https://wa.me/919918996096?text=Hi Ansh, Growth Predicted! I'm ready.", "_blank");
-                    resetHold();
+        // HOLD LOGIC
+        const hBtn = document.getElementById('h-trigger'), hFill = document.getElementById('h-fill');
+        let hVal = 0, hTimer;
+        function hStart(e) { 
+            e.preventDefault(); 
+            hTimer = setInterval(() => {
+                hVal += 4; hFill.style.width = hVal + '%';
+                if(hVal >= 100) { 
+                    clearInterval(hTimer); 
+                    window.location.href = "https://wa.me/919918996096?text=Start%20Audit"; 
                 }
-            }, 20);
+            }, 30); 
         }
-        function resetHold() {
-            clearInterval(holdTimer); progress = 0;
-            fill.style.width = "0%";
-            megaBtn.classList.remove('holding');
-        }
+        function hEnd() { clearInterval(hTimer); hVal = 0; hFill.style.width = '0%'; }
+        hBtn.addEventListener('pointerdown', hStart);
+        hBtn.addEventListener('pointerup', hEnd);
+        hBtn.addEventListener('pointerleave', hEnd);
 
-        megaBtn.addEventListener('mousedown', startHold);
-        megaBtn.addEventListener('mouseup', resetHold);
-        megaBtn.addEventListener('mouseleave', resetHold);
-        megaBtn.addEventListener('touchstart', startHold, {passive: false});
-        megaBtn.addEventListener('touchend', resetHold);
+        // UI HELPERS
+        function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
+        setInterval(() => document.getElementById('timer').innerText = new Date().toLocaleTimeString('en-IN', { hour12: false }), 1000);
+        
+        const obs = new IntersectionObserver((es) => {
+            es.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-        function book(p, pr) { window.open(`https://wa.me/919918996096?text=Interested in ${p}`, '_blank'); }
+        window.onscroll = () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+        };
     </script>
 </body>
 </html>
-
