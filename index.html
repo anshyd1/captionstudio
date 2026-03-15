@@ -1,1218 +1,1168 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="google-site-verification" content="x-FE2ODQ99_1Ia5D3U6-noxs-ELXhKVn4SZn_sHYKHw">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Ansh Yadav">
-<link rel="canonical" href="https://anshyd1.github.io/captionstudio/">
-<title>Caption Studio | Premium Websites & Personal Branding</title>
-<meta name="description" content="Websites starting ₹999. Delivered in 48 hours. No hidden charges. By Ansh Yadav.">
-<meta property="og:title" content="Caption Studio | Get Your Business Online Today">
-<meta property="og:description" content="Websites starting ₹999. 48-hour delivery. No hidden charges. Beginner friendly. By Ansh Yadav.">
-<meta property="og:image" content="https://i.ibb.co/dwhXTRz6/ansh.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://anshyd1.github.io/captionstudio/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Caption Studio | Premium Websites from ₹999">
-<meta name="twitter:description" content="48-hour delivery. No hidden charges. Get your business online today.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>">
-<meta name="theme-color" content="#0a0a0a">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<style>
-/* ===================== VARIABLES ===================== */
-:root {
-  --bg: #0a0a0a;
-  --bg2: #111111;
-  --bg3: #161616;
-  --gold: #c9a84c;
-  --gold2: #e8c97a;
-  --gold-b: rgba(201,168,76,.22);
-  --text: #f0ece4;
-  --muted: #6b6560;
-  --border: rgba(255,255,255,.07);
-  --ease: cubic-bezier(.16,1,.3,1);
-  --fd: 'Cormorant Garamond', serif;
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<meta name="google-site-verification" content="x-FE2ODQ99_1Ia5D3U6-noxs-ELXhKVn4SZn_sHYKHw"> 
+<meta name="robots" content="index, follow"> 
+<meta name="author" content="Ansh Yadav"> 
+<link rel="canonical" href="https://anshyd1.github.io/captionstudio/"> 
+<title>Caption Studio | Premium Websites & Personal Branding</title> 
+<meta name="description" content="Websites starting ₹999. Delivered in 48 hours. No hidden charges. By Ansh Yadav."> 
+<meta property="og:title" content="Caption Studio | Get Your Business Online Today"> <meta property="og:description" content="Websites starting ₹999. 48-hour delivery. No hidden charges. Beginner friendly. By Ansh Yadav."> 
+<meta property="og:image" content="https://i.ibb.co/dwhXTRz6/ansh.jpg"> 
+<meta property="og:type" content="website"> 
+<meta property="og:url" content="https://anshyd1.github.io/captionstudio/"> 
+<meta name="twitter:card" content="summary_large_image"> 
+<meta name="twitter:title" content="Caption Studio | Premium Websites from ₹999"> <meta name="twitter:description" content="48-hour delivery. No hidden charges. Get your business online today."> 
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>"> 
+<meta name="theme-color" content="#0a0a0a"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,40
+0;0,600;0,700;1,300;1,400&family=Syne:wght@400;600;700;800&family=DM+Mono:wght@
+300;400&display=swap" rel="stylesheet"> 
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script> 
+<style> 
+/* ===================== VARIABLES ===================== */ 
+:root { 
+  --bg: #0a0a0a; 
+  --bg2: #111111; 
+  --bg3: #161616; 
+  --gold: #c9a84c; 
+  --gold2: #e8c97a; 
+  --gold-b: rgba(201,168,76,.22); 
+  --text: #f0ece4; 
+  --muted: #6b6560; 
+  --border: rgba(255,255,255,.07); 
+  --ease: cubic-bezier(.16,1,.3,1); 
+  --fd: 'Cormorant Garamond', serif; 
   --fu: 'Syne', sans-serif;
-  --fm: 'DM Mono', monospace;
-  --hh: 68px;
-}
-body.light {
-  --bg: #f5f2ee;
-  --bg2: #ede9e3;
-  --bg3: #e5e0d8;
-  --text: #1a1612;
-  --muted: #7a7060;
-  --border: rgba(0,0,0,.08);
-  --gold-b: rgba(160,110,20,.22);
-}
-
-/* ===================== RESET ===================== */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--fu);
-  overflow-x: hidden;
-  -webkit-tap-highlight-color: transparent;
-  transition: background .5s, color .5s;
-  line-height: 1.6;
-}
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
-
-/* NOISE */
-body::after {
-  content: '';
-  position: fixed; inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none; z-index: 9000; opacity: .3;
-}
-
-/* CURSOR — desktop only */
-.cur, .cur-r { position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; }
-.cur { width: 8px; height: 8px; background: var(--gold); top: 0; left: 0; }
-.cur-r { width: 32px; height: 32px; border: 1px solid var(--gold); opacity: .4; top: 0; left: 0; transition: all .15s ease; }
-.cur.big { transform: scale(3); }
-.cur-r.big { transform: scale(1.5); opacity: .15; }
-@media (hover: none) { .cur, .cur-r { display: none; } }
-
-/* ===================== HEADER ===================== */
-header {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 800;
-  height: var(--hh);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 5%;
-  transition: background .4s, border-color .4s, height .4s;
-}
-header.stuck {
-  background: rgba(10,10,10,.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--gold-b);
-  height: 60px;
-}
-body.light header.stuck { background: rgba(245,242,238,.95); }
-
-.logo { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; letter-spacing: 3px; }
-.logo em { color: var(--gold); font-style: normal; }
-
-nav { display: flex; gap: 32px; align-items: center; }
-nav a { font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); transition: color .3s; font-weight: 700; }
-nav a:hover { color: var(--gold); }
-.nav-cta { border: 1px solid var(--gold-b); color: var(--gold) !important; padding: 9px 20px; border-radius: 6px; }
-.nav-cta:hover { background: var(--gold); color: var(--bg) !important; }
-
-.hdr-r { display: flex; gap: 8px; align-items: center; }
-.icon-btn {
-  width: 40px; height: 40px; border-radius: 9px;
-  background: none; border: 1px solid var(--border);
-  color: var(--text); cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  font-size: .82rem; transition: all .3s;
-}
-.icon-btn:hover { border-color: var(--gold-b); color: var(--gold); }
-.menu-btn { display: none; }
-@media (max-width: 900px) { nav { display: none; } .menu-btn { display: flex; } }
-
-/* THEME SPIN */
-#ti { display: inline-block; }
-.tspin { animation: tspin .45s var(--ease); }
-@keyframes tspin { from { transform: rotate(0) scale(.4); opacity: 0; } to { transform: rotate(360deg) scale(1); opacity: 1; } }
-
-/* ===================== HERO ===================== */
-/* KEY FIX: padding-top = header height exactly, no extra */
-.hero {
-  padding: var(--hh) 5% 0;
-  position: relative;
-  overflow: hidden;
-}
-.hero-inner {
-  padding: 36px 0 0;
-  position: relative; z-index: 1;
-}
-.hero-orb {
-  position: absolute; border-radius: 50%; filter: blur(90px);
-  pointer-events: none; z-index: 0;
-  animation: orbf 14s ease-in-out infinite alternate;
-}
-@keyframes orbf { from { transform: scale(1) translate(0,0); } to { transform: scale(1.2) translate(25px,15px); } }
-.hero-grid {
-  position: absolute; inset: 0; z-index: 0;
-  background-image:
-    linear-gradient(rgba(201,168,76,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201,168,76,.04) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 70% 70% at 60% 40%, black 20%, transparent 100%);
-}
-
-.tag {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--fm); font-size: .62rem; letter-spacing: 4px;
-  color: var(--gold); text-transform: uppercase; margin-bottom: 20px;
-}
-.tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
-
-h1.hh {
-  font-family: var(--fd);
-  font-size: clamp(2.6rem, 8vw, 7rem);
-  font-weight: 300; line-height: .92; letter-spacing: -1px;
-  max-width: 900px;
-}
-h1.hh em { color: var(--gold); font-style: italic; }
-h1.hh strong { font-weight: 700; display: block; }
-
-.hero-sub {
-  color: var(--muted); max-width: 480px;
-  margin-top: 20px; font-size: .92rem; line-height: 1.75;
-}
-
-.hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
-
-/* Hero stats — tightly below buttons */
-.hero-stats {
-  display: flex; margin-top: 40px;
-  border-top: 1px solid rgba(201,168,76,.12);
-}
-.hero-stat {
-  flex: 1; padding: 16px 0;
-  border-right: 1px solid rgba(201,168,76,.1);
-}
-.hero-stat:last-child { border-right: none; }
-.hero-stat-n {
-  font-family: var(--fd); font-size: 1.6rem;
-  font-weight: 700; color: var(--gold); line-height: 1;
-}
-.hero-stat-l {
-  font-family: var(--fm); font-size: .5rem;
-  letter-spacing: 2px; color: var(--muted);
-  text-transform: uppercase; margin-top: 4px;
-}
-
-/* ===================== BUTTONS ===================== */
-.btn-g {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--gold); color: #0a0a0a;
-  font-family: var(--fu); font-size: .72rem; font-weight: 800;
-  letter-spacing: 2px; text-transform: uppercase;
-  padding: 15px 28px; border-radius: 6px;
-  transition: all .3s; border: none; cursor: pointer; white-space: nowrap;
-}
-.btn-g:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 16px 36px rgba(201,168,76,.25); }
-.btn-o {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: transparent; color: var(--text);
-  font-family: var(--fu); font-size: .72rem; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase;
-  padding: 15px 28px; border-radius: 6px;
-  transition: all .3s; border: 1px solid var(--border); cursor: pointer; white-space: nowrap;
-}
-.btn-o:hover { border-color: var(--gold-b); color: var(--gold); }
-
-/* ===================== MARQUEE ===================== */
-.mq { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; padding: 15px 0; background: var(--bg2); }
-.mq-track { display: flex; width: max-content; animation: mq 30s linear infinite; }
-.mq-item { display: inline-flex; align-items: center; gap: 16px; padding: 0 32px; font-family: var(--fm); font-size: .6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
-.mq-item b { color: var(--gold); font-weight: 400; }
-@keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-/* ===================== HOOK BAND ===================== */
-.hook-band { background: var(--bg2); border-top: 1px solid var(--gold-b); border-bottom: 1px solid var(--gold-b); }
-.hg { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
-.hi { padding: 44px 36px; text-align: center; border-right: 1px solid var(--gold-b); transition: background .3s; }
-.hi:last-child { border-right: none; }
-.hi:hover { background: rgba(201,168,76,.03); }
-.hn { font-family: var(--fd); font-size: 3.2rem; font-weight: 700; color: var(--gold); line-height: 1; display: block; }
-.hl { font-family: var(--fm); font-size: .58rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 6px; display: block; }
-.hd { font-size: .8rem; color: var(--muted); margin-top: 10px; line-height: 1.6; }
-
-/* TRUST TAGS */
-.trust-strip {
-  background: var(--bg3); border-bottom: 1px solid var(--border);
-  padding: 12px 5%; display: flex; gap: 10px; flex-wrap: wrap;
-  align-items: center; justify-content: center;
-}
-.trust-tag {
-  font-family: var(--fm); font-size: .56rem; letter-spacing: 2px; text-transform: uppercase;
-  color: var(--gold); background: rgba(201,168,76,.07);
-  border: 1px solid var(--gold-b); border-radius: 20px; padding: 5px 12px; white-space: nowrap;
-}
-
-/* ===================== SECTIONS ===================== */
-.sec { padding: 64px 5%; max-width: 1380px; margin: 0 auto; }
-.lbl { display: inline-flex; align-items: center; gap: 10px; font-family: var(--fm); font-size: .6rem; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; }
-.lbl::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
-.st { font-family: var(--fd); font-size: clamp(2rem, 4.5vw, 4rem); font-weight: 300; line-height: 1; }
-.st em { color: var(--gold); font-style: italic; }
-
-/* ===================== BRAND POSTER ===================== */
-.poster-wrap { padding: 0 5%; margin-top: 8px; }
-.poster {
-  background: linear-gradient(135deg, var(--bg2), var(--bg3));
-  border: 1px solid var(--gold-b); border-radius: 20px;
-  padding: 48px 40px; position: relative; overflow: hidden;
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 32px;
-}
-.poster::before {
-  content: ''; position: absolute;
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(201,168,76,.1), transparent 70%);
-  top: -80px; right: -60px; border-radius: 50%; pointer-events: none;
-}
-.poster-text { flex: 1; min-width: 240px; position: relative; z-index: 1; }
-.poster-sub { font-family: var(--fm); font-size: .58rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; }
-.poster-h { font-family: var(--fd); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 300; line-height: 1.05; margin-bottom: 14px; }
-.poster-h em { color: var(--gold); font-style: italic; }
-.poster-p { color: var(--muted); font-size: .85rem; max-width: 400px; line-height: 1.7; margin-bottom: 22px; }
-.poster-pills { display: flex; gap: 16px; flex-wrap: wrap; }
-.poster-pill { border-left: 2px solid var(--gold); padding-left: 12px; }
-.poster-pill-t { font-weight: 800; color: var(--gold); font-size: .78rem; letter-spacing: 1px; }
-.poster-pill-s { font-size: .58rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
-.poster-card {
-  flex-shrink: 0;
-  width: 200px; height: 136px;
-  background: rgba(255,255,255,.03); backdrop-filter: blur(12px);
-  border: 1px solid rgba(201,168,76,.28); border-radius: 16px;
-  transform: rotate(-4deg);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  box-shadow: 0 24px 50px rgba(0,0,0,.4);
-  position: relative; z-index: 1;
-}
-
-/* ===================== PRICING ===================== */
-.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
-.price-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 18px; padding: 32px 26px;
-  position: relative; transition: border-color .35s, transform .35s;
-}
-.price-card:hover { border-color: var(--gold-b); transform: translateY(-3px); }
-.price-card.featured {
-  background: linear-gradient(160deg, rgba(201,168,76,.07), var(--bg2));
-  border-color: var(--gold-b);
-  box-shadow: 0 16px 40px rgba(201,168,76,.1);
-}
-.price-badge {
-  position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
-  font-family: var(--fm); font-size: .52rem; letter-spacing: 2px;
-  background: var(--gold); color: #0a0a0a; border-radius: 12px;
-  padding: 4px 14px; text-transform: uppercase; font-weight: 700; white-space: nowrap;
-}
-.price-plan { font-family: var(--fm); font-size: .56rem; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
-.price-n { font-family: var(--fd); font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
-.price-sub { font-size: .7rem; color: var(--muted); margin-top: 3px; margin-bottom: 18px; }
-.price-div { height: 1px; background: var(--border); margin-bottom: 18px; }
-.price-feat { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; }
-.price-feat li { font-size: .78rem; display: flex; align-items: flex-start; gap: 8px; list-style: none; line-height: 1.4; }
-.price-feat li .chk { color: var(--gold); flex-shrink: 0; margin-top: 1px; }
-.price-trust { text-align: center; margin-top: 24px; padding: 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg2); }
-.price-trust p { font-family: var(--fm); font-size: .58rem; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
-.price-trust p span { color: var(--gold); }
-
-/* ===================== SERVICES ===================== */
-.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-top: 48px; }
-.svc { background: var(--bg); padding: 40px 32px; transition: background .35s; position: relative; overflow: hidden; }
-.svc::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform .4s var(--ease); transform-origin: left; }
-.svc:hover { background: rgba(201,168,76,.025); }
-.svc:hover::after { transform: scaleX(1); }
-.svc-n { font-family: var(--fm); font-size: .55rem; letter-spacing: 3px; color: var(--muted); margin-bottom: 12px; display: block; text-transform: uppercase; }
-.svc-ico { font-size: 1.5rem; margin-bottom: 18px; display: block; }
-.svc-name { font-family: var(--fd); font-size: 1.45rem; font-weight: 600; margin-bottom: 12px; line-height: 1.1; }
-.svc-desc { color: var(--muted); font-size: .8rem; line-height: 1.7; }
-
-/* ===================== PROCESS ===================== */
-.proc-wrap { display: grid; grid-template-columns: 1fr 420px; gap: 70px; align-items: start; margin-top: 52px; }
-.proc-item { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: .3s; }
-.proc-item:first-child { border-top: 1px solid var(--border); }
-.proc-item:hover .pn, .proc-item.sel .pn { color: var(--gold); }
-.pn { font-family: var(--fm); font-size: .62rem; letter-spacing: 2px; color: var(--muted); min-width: 28px; padding-top: 2px; transition: .3s; }
-.pc h3 { font-family: var(--fd); font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; }
-.pc p { color: var(--muted); font-size: .8rem; line-height: 1.7; }
-.proc-vis { position: sticky; top: 90px; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 44px; text-align: center; }
-.pvi { font-size: 3rem; margin-bottom: 16px; display: block; }
-
-/* ===================== PROOF ===================== */
-.proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 52px; }
-.proof-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: all .5s var(--ease); }
-.proof-card:hover { border-color: var(--gold-b); transform: translateY(-4px); }
-.proof-img { width: 100%; display: block; background: #0a0a0a; max-height: 340px; object-fit: contain; }
-.proof-info { padding: 22px; display: flex; align-items: center; justify-content: space-between; }
-.proof-stat { font-family: var(--fd); font-size: 2rem; font-weight: 700; color: var(--gold); }
-.proof-lbl { font-size: .62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 3px; }
-.proof-badge { font-family: var(--fm); font-size: .54rem; letter-spacing: 2px; padding: 5px 12px; border: 1px solid var(--gold-b); color: var(--gold); border-radius: 20px; text-transform: uppercase; white-space: nowrap; }
-
-/* FOUNDER CARD */
-.founder-card {
-  background: var(--bg2); border: 1px solid var(--border);
-  border-radius: 14px; overflow: hidden; transition: all .5s var(--ease);
-}
-.founder-card:hover { border-color: var(--gold-b); transform: translateY(-4px); }
-.founder-img-wrap {
-  width: 100%; height: 220px;
-  overflow: hidden; background: var(--bg3);
-  display: flex; align-items: center; justify-content: center;
-}
-.founder-img-wrap img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: top center;
-  display: block;
-}
-
-/* ===================== PORTFOLIO ===================== */
-.port-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
-.port-card { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: var(--bg2); transition: all .4s var(--ease); cursor: pointer; }
-.port-card:hover { border-color: var(--gold-b); transform: translateY(-5px); }
-.port-card:hover .port-ov { opacity: 1; }
-.port-screen { height: 190px; position: relative; overflow: hidden; }
-.port-bar { height: 24px; background: rgba(255,255,255,.04); display: flex; align-items: center; padding: 0 10px; gap: 5px; border-bottom: 1px solid var(--border); }
-.dot { width: 6px; height: 6px; border-radius: 50%; }
-.port-body { height: calc(190px - 24px); position: relative; overflow: hidden; }
-.port-ov { position: absolute; inset: 0; background: rgba(10,10,10,.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: .3s; backdrop-filter: blur(4px); }
-.port-info { padding: 16px 20px; }
-.port-tag { font-family: var(--fm); font-size: .54rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; }
-.port-name { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; }
-.port-desc { font-size: .72rem; color: var(--muted); margin-top: 3px; }
-.mock { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 16px; }
-.mbar { height: 4px; border-radius: 2px; }
-.mrow { display: flex; gap: 5px; width: 100%; }
-.mcard { border-radius: 5px; flex: 1; }
-
-/* ===================== TESTIMONIAL ===================== */
-.testi { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.testi-inner { max-width: 700px; margin: 0 auto; padding: 80px 5%; text-align: center; }
-.tq { font-family: var(--fd); font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 300; font-style: italic; line-height: 1.55; margin-bottom: 28px; }
-.tauth { display: flex; align-items: center; justify-content: center; gap: 13px; }
-.tav { width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--gold-b); object-fit: cover; flex-shrink: 0; }
-
-/* ===================== FAQ ===================== */
-.faq-list { margin-top: 44px; max-width: 720px; }
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; cursor: pointer; font-weight: 700; font-size: .92rem; transition: color .3s; gap: 14px; }
-.faq-q:hover { color: var(--gold); }
-.faq-ico { width: 26px; height: 26px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .8rem; color: var(--muted); transition: all .35s; flex-shrink: 0; }
-.faq-item.open .faq-ico { background: var(--gold); border-color: var(--gold); color: #000; transform: rotate(45deg); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height .5s var(--ease), padding .5s; color: var(--muted); font-size: .83rem; line-height: 1.75; }
-.faq-item.open .faq-a { max-height: 200px; padding-bottom: 22px; }
-
-/* ===================== CTA ===================== */
-.cta { text-align: center; padding: 72px 5% 80px; position: relative; overflow: hidden; }
-.cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(201,168,76,.05) 0%, transparent 70%); pointer-events: none; }
-.cta-h { font-family: var(--fd); font-size: clamp(2.6rem, 6vw, 5.5rem); font-weight: 300; line-height: .92; margin-bottom: 22px; }
-.cta-h em { color: var(--gold); font-style: italic; }
-.stats-row { display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; margin-top: 48px; align-items: center; }
-.stat-n { font-family: var(--fd); font-size: 2.4rem; font-weight: 700; color: var(--gold); }
-.stat-l { font-family: var(--fm); font-size: .56rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-top: 3px; }
-.sdiv { width: 1px; height: 44px; background: var(--border); }
-
-/* HOLD BUTTON */
-.hold-wrap { display: inline-flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 40px; }
-.hold-btn { width: 310px; height: 64px; position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; border: 1px solid var(--gold-b); background: transparent; user-select: none; -webkit-user-select: none; touch-action: none; }
-.hold-fill { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--gold); }
-.hold-txt { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 800; font-size: .68rem; letter-spacing: 2.5px; text-transform: uppercase; z-index: 2; color: var(--text); pointer-events: none; transition: color .1s; }
-.hold-hint { font-family: var(--fm); font-size: .56rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; }
-
-/* ===================== FOOTER ===================== */
-footer { border-top: 1px solid var(--border); padding: 48px 5%; }
-.foot { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; }
-.fl { font-family: var(--fd); font-size: 1.15rem; font-weight: 600; }
-.fl em { color: var(--gold); font-style: normal; }
-.flinks { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
-.flinks a { font-size: .62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); transition: color .3s; }
-.flinks a:hover { color: var(--gold); }
-.fsoc { display: flex; gap: 10px; justify-content: flex-end; }
-.sb2 { width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); transition: all .3s; }
-.sb2:hover { border-color: var(--gold-b); color: var(--gold); }
-.fcopy { text-align: center; font-family: var(--fm); font-size: .54rem; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); }
-#clk { color: var(--gold); }
-
-/* FLOATING WA */
-.fwa { position: fixed; bottom: 24px; right: 20px; z-index: 700; }
-.fwa-btn { width: 54px; height: 54px; background: #25D366; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.35); transition: all .3s; animation: wap 3s infinite; }
-.fwa-btn:hover { transform: scale(1.1); }
-@keyframes wap { 0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,.35); } 50% { box-shadow: 0 6px 40px rgba(37,211,102,.6); } }
-
-/* ===================== SIDEBAR ===================== */
-#sb { position: fixed; top: 0; left: 0; width: 272px; height: 100%; background: rgba(10,10,10,.98); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); z-index: 900; transform: translateX(-100%); transition: transform .5s cubic-bezier(.8,0,.2,1); border-right: 1px solid var(--gold-b); display: flex; flex-direction: column; overflow-y: auto; }
-body.light #sb { background: rgba(245,242,238,.98); }
-#sb.on { transform: translateX(0); }
-.sb-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-.sb-nav { display: flex; flex-direction: column; flex: 1; padding: 8px 0; }
-.sb-nav a { font-family: var(--fu); font-size: .72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 13px 24px; border-bottom: 1px solid var(--border); transition: color .25s, background .25s, padding-left .25s; color: var(--muted); display: flex; align-items: center; gap: 10px; }
-.sb-nav a::before { content: ''; width: 14px; height: 1px; background: currentColor; opacity: .35; transition: width .25s; flex-shrink: 0; }
-.sb-nav a:hover { color: var(--gold); padding-left: 32px; background: rgba(201,168,76,.04); }
-.sb-nav a:hover::before { width: 20px; opacity: 1; }
-.sb-foot { padding: 18px 24px; border-top: 1px solid var(--border); flex-shrink: 0; }
-/* Sidebar button — clean, not bhadda */
-.sb-wa-btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  width: 100%; padding: 12px 16px;
-  background: transparent;
-  border: 1px solid var(--gold-b);
-  border-radius: 8px; color: var(--gold);
-  font-family: var(--fu); font-size: .68rem; font-weight: 700;
-  letter-spacing: 2px; text-transform: uppercase;
-  transition: all .3s;
-}
-.sb-wa-btn:hover { background: var(--gold); color: #0a0a0a; }
-.sb-founder { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px; background: rgba(201,168,76,.05); border-radius: 8px; border: 1px solid var(--gold-b); }
-.sb-founder img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; object-position: top; flex-shrink: 0; border: 1.5px solid var(--gold-b); }
-
-.ov { position: fixed; inset: 0; background: rgba(0,0,0,.7); backdrop-filter: blur(6px); z-index: 850; opacity: 0; visibility: hidden; transition: .4s; }
-.ov.on { opacity: 1; visibility: visible; }
-
-/* ===================== REVEAL ===================== */
-/* Safe approach: transform only, never hide content permanently */
-.rv { opacity: 0; transform: translateY(28px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
-.rv.go { opacity: 1; transform: translateY(0); }
-.rv.d1 { transition-delay: .1s; }
-.rv.d2 { transition-delay: .2s; }
-.rv.d3 { transition-delay: .3s; }
-/* Fallback: if JS fails or slow — show everything after 2s */
-@media (prefers-reduced-motion: reduce) { .rv { opacity: 1 !important; transform: none !important; } }
-
-/* ===================== RAZORPAY PAYMENT ===================== */
-.pay-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 64px 5%; }
-.pay-inner { max-width: 1000px; margin: 0 auto; }
-.pay-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 44px; }
-.pay-card {
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: 16px; padding: 28px 24px; text-align: center;
-  transition: all .35s var(--ease); position: relative;
-}
-.pay-card:hover { border-color: var(--gold-b); transform: translateY(-3px); }
-.pay-card.featured-pay { border-color: var(--gold-b); background: linear-gradient(160deg,rgba(201,168,76,.06),var(--bg)); }
-.pay-plan-name { font-family: var(--fm); font-size: .55rem; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
-.pay-amount { font-family: var(--fd); font-size: 2.4rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 4px; }
-.pay-desc { font-size: .72rem; color: var(--muted); margin-bottom: 20px; }
-.pay-btn {
-  display: flex; align-items: center; justify-content: center; gap: 7px;
-  width: 100%; padding: 13px;
-  background: var(--gold); color: #0a0a0a;
-  border: none; border-radius: 8px; cursor: pointer;
-  font-family: var(--fu); font-size: .68rem; font-weight: 800;
-  letter-spacing: 2px; text-transform: uppercase;
-  transition: all .3s;
-}
-.pay-btn:hover { background: var(--gold2); transform: translateY(-1px); }
-.pay-btn:active { transform: scale(.98); }
-.pay-secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; font-family: var(--fm); font-size: .52rem; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; }
-.pay-note { text-align: center; margin-top: 28px; padding: 14px 20px; background: rgba(201,168,76,.04); border: 1px solid var(--gold-b); border-radius: 10px; }
-.pay-note p { font-family: var(--fm); font-size: .58rem; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; line-height: 1.8; }
-.pay-note p strong { color: var(--gold); }
-
-/* ===================== MODAL ===================== */
-.modal-overlay {
-  position: fixed; inset: 0; background: rgba(0,0,0,.85);
-  backdrop-filter: blur(10px); z-index: 9999;
-  display: flex; align-items: flex-end;
-  opacity: 0; visibility: hidden; transition: all .4s var(--ease);
-}
-.modal-overlay.show { opacity: 1; visibility: visible; }
-.modal-box {
-  width: 100%; max-width: 680px; margin: 0 auto;
-  background: var(--bg2); border-top: 1px solid var(--gold-b);
-  border-radius: 20px 20px 0 0; padding: 0;
-  max-height: 85vh; overflow: hidden;
-  display: flex; flex-direction: column;
-  transform: translateY(100%); transition: transform .5s var(--ease);
-}
-.modal-overlay.show .modal-box { transform: translateY(0); }
-.modal-head {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 20px 28px; border-bottom: 1px solid var(--border);
-  flex-shrink: 0;
-}
-.modal-title { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; }
-.modal-close {
-  width: 32px; height: 32px; border-radius: 50%;
-  background: var(--border); border: none; cursor: pointer;
-  color: var(--text); display: flex; align-items: center; justify-content: center;
-  font-size: .8rem; transition: .3s;
-}
-.modal-close:hover { background: var(--gold); color: #000; }
-.modal-body { padding: 28px; overflow-y: auto; flex: 1; }
-.modal-body h3 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--gold); margin: 20px 0 8px; }
-.modal-body h3:first-child { margin-top: 0; }
-.modal-body p { font-size: .82rem; color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
-.modal-body ul { padding-left: 16px; margin-bottom: 10px; }
-.modal-body ul li { font-size: .82rem; color: var(--muted); line-height: 1.8; margin-bottom: 4px; }
-.modal-drag { width: 40px; height: 4px; background: var(--border); border-radius: 2px; margin: 12px auto 0; }
-@media(max-width:650px){.pay-grid{grid-template-columns:1fr;}.modal-box{max-height:92vh;border-radius:16px 16px 0 0;}}
-@media (max-width: 900px) {
-  .svc-grid { grid-template-columns: 1fr 1fr; }
-  .proc-vis { display: none; }
-  .proc-wrap { grid-template-columns: 1fr; }
-  .port-grid { grid-template-columns: 1fr 1fr; }
-  .foot { grid-template-columns: 1fr; text-align: center; }
-  .fsoc { justify-content: center; }
-}
-
-@media (max-width: 650px) {
-  :root { --hh: 60px; }
-  h1.hh { font-size: clamp(2.2rem, 8vw, 2.8rem); letter-spacing: -.5px; }
-  .hero-btns { flex-direction: column; gap: 10px; }
-  .btn-g, .btn-o { justify-content: center; width: 100%; max-width: 300px; }
-  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
-  .hero-stat { border-right: 1px solid rgba(201,168,76,.1) !important; }
-  .hero-stat:last-child { border-right: none !important; }
-  .hg { grid-template-columns: 1fr; }
-  .hi { border-right: none; border-bottom: 1px solid var(--gold-b); }
-  .hi:last-child { border-bottom: none; }
-  .svc-grid { grid-template-columns: 1fr; }
-  .proof-grid { grid-template-columns: 1fr; }
-  .port-grid { grid-template-columns: 1fr; }
-  .pricing-grid { grid-template-columns: 1fr; }
-  .pricing-grid .price-card:nth-child(2) { transform: none; }
-  .hold-btn { width: 88vw; }
-  .stats-row { gap: 20px; }
-  .sdiv { height: 32px; }
-  .sec { padding: 64px 5%; }
-  .cta { padding: 72px 5%; }
-  .poster { padding: 32px 24px; }
-  .poster-card { display: none; }
-}
-
-@media (min-width: 651px) and (max-width: 900px) {
-  .pricing-grid { grid-template-columns: 1fr 1fr; }
-  .pricing-grid .price-card:nth-child(2) { transform: none; }
-  .pricing-grid .price-card:nth-child(3) { grid-column: span 2; }
-}
-</style>
-</head>
-<body>
-<!-- Cursor -->
-<div class="cur" id="cur"></div>
-<div class="cur-r" id="cur-r"></div>
-
-<!-- Floating WA -->
-<div class="fwa">
-  <a class="fwa-btn" href="https://wa.me/919918996096?text=Hey%20Ansh%2C%20I%20want%20a%20free%20demo!" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg width="25" height="25" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+  --fm: 'DM Mono', monospace; 
+  --hh: 68px; 
+} 
+body.light {   --bg: #f5f2ee; 
+  --bg2: #ede9e3; 
+  --bg3: #e5e0d8; 
+  --text: #1a1612; 
+  --muted: #7a7060; 
+  --border: rgba(0,0,0,.08); 
+  --gold-b: rgba(160,110,20,.22); 
+} 
+ 
+/* ===================== RESET ===================== */ 
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body {   background: var(--bg);   color: var(--text);   font-family: var(--fu);   overflow-x: hidden; 
+  -webkit-tap-highlight-color: transparent;   transition: background .5s, color .5s;   line-height: 1.6; 
+} 
+a { text-decoration: none; color: inherit; } img { max-width: 100%; display: block; } 
+::-webkit-scrollbar { width: 3px; } 
+::-webkit-scrollbar-track { background: var(--bg); } 
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; } 
+ 
+/* NOISE */ body::after {   content: '';   position: fixed; inset: 0;   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");   pointer-events: none; z-index: 9000; opacity: .3; 
+} 
+ 
+/* CURSOR — desktop only */ 
+.cur, .cur-r { position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; } 
+.cur { width: 8px; height: 8px; background: var(--gold); top: 0; left: 0; } 
+.cur-r { width: 32px; height: 32px; border: 1px solid var(--gold); opacity: .4; top: 0; left: 0; transition: all .15s ease; } 
+.cur.big { transform: scale(3); } 
+.cur-r.big { transform: scale(1.5); opacity: .15; } 
+@media (hover: none) { .cur, .cur-r { display: none; } } 
+ 
+/* ===================== HEADER ===================== */ header { 
+  position: fixed; top: 0; left: 0; right: 0;   z-index: 800;   height: var(--hh);   display: flex; align-items: center; justify-content: space-between;   padding: 0 5%;   transition: background .4s, border-color .4s, height .4s; 
+} 
+header.stuck {   background: rgba(10,10,10,.95);   backdrop-filter: blur(20px);   -webkit-backdrop-filter: blur(20px);   border-bottom: 1px solid var(--gold-b);   height: 60px; 
+} 
+body.light header.stuck { background: rgba(245,242,238,.95); } 
+ 
+.logo { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; letter-spacing: 3px; } .logo em { color: var(--gold); font-style: normal; } 
+ 
+nav { display: flex; gap: 32px; align-items: center; } nav a { font-size: .68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); transition: color .3s; font-weight: 700; } nav a:hover { color: var(--gold); } 
+.nav-cta { border: 1px solid var(--gold-b); color: var(--gold) !important; padding: 9px 20px; border-radius: 6px; } 
+.nav-cta:hover { background: var(--gold); color: var(--bg) !important; } 
+ 
+.hdr-r { display: flex; gap: 8px; align-items: center; } 
+.icon-btn {   width: 40px; height: 40px; border-radius: 9px;   background: none; border: 1px solid var(--border);   color: var(--text); cursor: pointer;   display: flex; align-items: center; justify-content: center;   font-size: .82rem; transition: all .3s; 
+} 
+.icon-btn:hover { border-color: var(--gold-b); color: var(--gold); } 
+.menu-btn { display: none; } 
+@media (max-width: 900px) { nav { display: none; } .menu-btn { display: flex; } } 
+ 
+/* THEME SPIN */ 
+#ti { display: inline-block; } 
+.tspin { animation: tspin .45s var(--ease); } 
+@keyframes tspin { from { transform: rotate(0) scale(.4); opacity: 0; } to { transform: rotate(360deg) scale(1); opacity: 1; } } 
+ 
+/* ===================== HERO ===================== */ 
+/* KEY FIX: padding-top = header height exactly, no extra */ 
+.hero {   padding: var(--hh) 5% 0;   position: relative;   overflow: hidden; 
+} 
+.hero-inner {   padding: 36px 0 0; 
+  position: relative; z-index: 1; 
+} 
+.hero-orb { 
+  position: absolute; border-radius: 50%; filter: blur(90px);   pointer-events: none; z-index: 0;   animation: orbf 14s ease-in-out infinite alternate; 
+} 
+@keyframes orbf { from { transform: scale(1) translate(0,0); } to { transform: scale(1.2) translate(25px,15px); } } 
+.hero-grid { 
+  position: absolute; inset: 0; z-index: 0;   background-image: 
+    linear-gradient(rgba(201,168,76,.04) 1px, transparent 1px),     linear-gradient(90deg, rgba(201,168,76,.04) 1px, transparent 1px);   background-size: 56px 56px;   mask-image: radial-gradient(ellipse 70% 70% at 60% 40%, black 20%, transparent 100%); 
+} 
+ 
+.tag {   display: inline-flex; align-items: center; gap: 10px;   font-family: var(--fm); font-size: .62rem; letter-spacing: 4px;   color: var(--gold); text-transform: uppercase; margin-bottom: 20px; 
+} 
+.tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); } 
+ 
+h1.hh {   font-family: var(--fd);   font-size: clamp(2.6rem, 8vw, 7rem);   font-weight: 300; line-height: .92; letter-spacing: -1px;   max-width: 900px; 
+} 
+h1.hh em { color: var(--gold); font-style: italic; } h1.hh strong { font-weight: 700; display: block; } 
+ 
+.hero-sub {   color: var(--muted); max-width: 480px;   margin-top: 20px; font-size: .92rem; line-height: 1.75; 
+} 
+ 
+.hero-btns { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; } 
+ 
+/* Hero stats — tightly below buttons */ 
+.hero-stats {   display: flex; margin-top: 40px; 
+  border-top: 1px solid rgba(201,168,76,.12); 
+} 
+.hero-stat {   flex: 1; padding: 16px 0;   border-right: 1px solid rgba(201,168,76,.1); 
+} 
+.hero-stat:last-child { border-right: none; } 
+.hero-stat-n {   font-family: var(--fd); font-size: 1.6rem; 
+  font-weight: 700; color: var(--gold); line-height: 1; 
+} 
+.hero-stat-l {   font-family: var(--fm); font-size: .5rem;   letter-spacing: 2px; color: var(--muted);   text-transform: uppercase; margin-top: 4px; 
+} 
+ 
+/* ===================== BUTTONS ===================== */ 
+.btn-g {   display: inline-flex; align-items: center; gap: 8px;   background: var(--gold); color: #0a0a0a;   font-family: var(--fu); font-size: .72rem; font-weight: 800;   letter-spacing: 2px; text-transform: uppercase;   padding: 15px 28px; border-radius: 6px;   transition: all .3s; border: none; cursor: pointer; white-space: nowrap; 
+} 
+.btn-g:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 16px 
+36px rgba(201,168,76,.25); } 
+.btn-o {   display: inline-flex; align-items: center; gap: 8px;   background: transparent; color: var(--text);   font-family: var(--fu); font-size: .72rem; font-weight: 700;   letter-spacing: 2px; text-transform: uppercase;   padding: 15px 28px; border-radius: 6px;   transition: all .3s; border: 1px solid var(--border); cursor: pointer; white-space: nowrap; 
+} 
+.btn-o:hover { border-color: var(--gold-b); color: var(--gold); } 
+ 
+/* ===================== MARQUEE ===================== */ 
+.mq { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: 
+hidden; padding: 15px 0; background: var(--bg2); } 
+.mq-track { display: flex; width: max-content; animation: mq 30s linear infinite; } 
+.mq-item { display: inline-flex; align-items: center; gap: 16px; padding: 0 32px; font-family: var(--fm); font-size: .6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); white-space: nowrap; } 
+.mq-item b { color: var(--gold); font-weight: 400; } 
+@keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } } 
+ 
+/* ===================== HOOK BAND ===================== */ 
+.hook-band { background: var(--bg2); border-top: 1px solid var(--gold-b); border-bottom: 1px solid var(--gold-b); } 
+.hg { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); 
+} 
+.hi { padding: 44px 36px; text-align: center; border-right: 1px solid var(--gold-b); transition: 
+background .3s; } 
+.hi:last-child { border-right: none; } 
+.hi:hover { background: rgba(201,168,76,.03); } 
+.hn { font-family: var(--fd); font-size: 3.2rem; font-weight: 700; color: var(--gold); line-height: 
+1; display: block; } 
+.hl { font-family: var(--fm); font-size: .58rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 6px; display: block; } 
+.hd { font-size: .8rem; color: var(--muted); margin-top: 10px; line-height: 1.6; } 
+ 
+/* TRUST TAGS */ 
+.trust-strip {   background: var(--bg3); border-bottom: 1px solid var(--border);   padding: 12px 5%; display: flex; gap: 10px; flex-wrap: wrap;   align-items: center; justify-content: center; 
+} 
+.trust-tag {   font-family: var(--fm); font-size: .56rem; letter-spacing: 2px; text-transform: uppercase;   color: var(--gold); background: rgba(201,168,76,.07);   border: 1px solid var(--gold-b); border-radius: 20px; padding: 5px 12px; white-space: 
+nowrap; 
+} 
+ 
+/* ===================== SECTIONS ===================== */ 
+.sec { padding: 64px 5%; max-width: 1380px; margin: 0 auto; } 
+.lbl { display: inline-flex; align-items: center; gap: 10px; font-family: var(--fm); font-size: .6rem; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 14px; } 
+.lbl::before { content: ''; width: 26px; height: 1px; background: var(--gold); } 
+.st { font-family: var(--fd); font-size: clamp(2rem, 4.5vw, 4rem); font-weight: 300; line-height: 
+1; } 
+.st em { color: var(--gold); font-style: italic; } 
+ 
+/* ===================== BRAND POSTER ===================== */ 
+.poster-wrap { padding: 0 5%; margin-top: 8px; } 
+.poster {   background: linear-gradient(135deg, var(--bg2), var(--bg3));   border: 1px solid var(--gold-b); border-radius: 20px;   padding: 48px 40px; position: relative; overflow: hidden;   display: flex; align-items: center; justify-content: space-between;   flex-wrap: wrap; gap: 32px; 
+} 
+.poster::before {   content: ''; position: absolute;   width: 300px; height: 300px;   background: radial-gradient(circle, rgba(201,168,76,.1), transparent 70%);   top: -80px; right: -60px; border-radius: 50%; pointer-events: none; 
+} 
+.poster-text { flex: 1; min-width: 240px; position: relative; z-index: 1; } 
+.poster-sub { font-family: var(--fm); font-size: .58rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; } 
+.poster-h { font-family: var(--fd); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 300; line-height: 1.05; margin-bottom: 14px; } 
+.poster-h em { color: var(--gold); font-style: italic; } 
+.poster-p { color: var(--muted); font-size: .85rem; max-width: 400px; line-height: 1.7; margin-bottom: 22px; } 
+.poster-pills { display: flex; gap: 16px; flex-wrap: wrap; } 
+.poster-pill { border-left: 2px solid var(--gold); padding-left: 12px; } 
+.poster-pill-t { font-weight: 800; color: var(--gold); font-size: .78rem; letter-spacing: 1px; } .poster-pill-s { font-size: .58rem; color: var(--muted); letter-spacing: 2px; text-transform: 
+uppercase; margin-top: 2px; } 
+.poster-card {   flex-shrink: 0;   width: 200px; height: 136px;   background: rgba(255,255,255,.03); backdrop-filter: blur(12px);   border: 1px solid rgba(201,168,76,.28); border-radius: 16px;   transform: rotate(-4deg);   display: flex; flex-direction: column; align-items: center; justify-content: center;   box-shadow: 0 24px 50px rgba(0,0,0,.4);   position: relative; z-index: 1; 
+} 
+ 
+/* ===================== PRICING ===================== */ 
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 
+44px; } .price-card {   background: var(--bg2); border: 1px solid var(--border);   border-radius: 18px; padding: 32px 26px;   position: relative; transition: border-color .35s, transform .35s; 
+} 
+.price-card:hover { border-color: var(--gold-b); transform: translateY(-3px); } 
+.price-card.featured {   background: linear-gradient(160deg, rgba(201,168,76,.07), var(--bg2));   border-color: var(--gold-b);   box-shadow: 0 16px 40px rgba(201,168,76,.1); 
+} 
+.price-badge {   position: absolute; top: -11px; left: 50%; transform: translateX(-50%);   font-family: var(--fm); font-size: .52rem; letter-spacing: 2px;   background: var(--gold); color: #0a0a0a; border-radius: 12px;   padding: 4px 14px; text-transform: uppercase; font-weight: 700; white-space: nowrap; 
+} 
+.price-plan { font-family: var(--fm); font-size: .56rem; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; } 
+.price-n { font-family: var(--fd); font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; } 
+.price-sub { font-size: .7rem; color: var(--muted); margin-top: 3px; margin-bottom: 18px; } 
+.price-div { height: 1px; background: var(--border); margin-bottom: 18px; } 
+.price-feat { display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; } 
+.price-feat li { font-size: .78rem; display: flex; align-items: flex-start; gap: 8px; list-style: none; line-height: 1.4; } 
+.price-feat li .chk { color: var(--gold); flex-shrink: 0; margin-top: 1px; } 
+.price-trust { text-align: center; margin-top: 24px; padding: 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--bg2); } 
+.price-trust p { font-family: var(--fm); font-size: .58rem; letter-spacing: 1.5px; color: 
+var(--muted); text-transform: uppercase; } 
+.price-trust p span { color: var(--gold); } 
+ 
+/* ===================== SERVICES ===================== */ 
+.svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-top: 48px; } 
+.svc { background: var(--bg); padding: 40px 32px; transition: background .35s; position: 
+relative; overflow: hidden; } 
+.svc::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform .4s var(--ease); transform-origin: left; } 
+.svc:hover { background: rgba(201,168,76,.025); } 
+.svc:hover::after { transform: scaleX(1); } 
+.svc-n { font-family: var(--fm); font-size: .55rem; letter-spacing: 3px; color: var(--muted); margin-bottom: 12px; display: block; text-transform: uppercase; } .svc-ico { font-size: 1.5rem; margin-bottom: 18px; display: block; } 
+.svc-name { font-family: var(--fd); font-size: 1.45rem; font-weight: 600; margin-bottom: 12px; line-height: 1.1; } 
+.svc-desc { color: var(--muted); font-size: .8rem; line-height: 1.7; } 
+ 
+/* ===================== PROCESS ===================== */ 
+.proc-wrap { display: grid; grid-template-columns: 1fr 420px; gap: 70px; align-items: start; margin-top: 52px; } 
+.proc-item { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--border); cursor: pointer; transition: .3s; } 
+.proc-item:first-child { border-top: 1px solid var(--border); } 
+.proc-item:hover .pn, .proc-item.sel .pn { color: var(--gold); } 
+.pn { font-family: var(--fm); font-size: .62rem; letter-spacing: 2px; color: var(--muted); min-width: 28px; padding-top: 2px; transition: .3s; } 
+.pc h3 { font-family: var(--fd); font-size: 1.25rem; font-weight: 600; margin-bottom: 6px; } 
+.pc p { color: var(--muted); font-size: .8rem; line-height: 1.7; } 
+.proc-vis { position: sticky; top: 90px; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; padding: 44px; text-align: center; } 
+.pvi { font-size: 3rem; margin-bottom: 16px; display: block; } 
+ 
+/* ===================== PROOF ===================== */ 
+.proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 52px; 
+} 
+.proof-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: all .5s var(--ease); } 
+.proof-card:hover { border-color: var(--gold-b); transform: translateY(-4px); } 
+.proof-img { width: 100%; display: block; background: #0a0a0a; max-height: 340px; object-fit: contain; } 
+.proof-info { padding: 22px; display: flex; align-items: center; justify-content: space-between; 
+} 
+.proof-stat { font-family: var(--fd); font-size: 2rem; font-weight: 700; color: var(--gold); } .proof-lbl { font-size: .62rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-top: 3px; } 
+.proof-badge { font-family: var(--fm); font-size: .54rem; letter-spacing: 2px; padding: 5px 12px; border: 1px solid var(--gold-b); color: var(--gold); border-radius: 20px; text-transform: 
+uppercase; white-space: nowrap; } 
+ 
+/* FOUNDER CARD */ 
+.founder-card {   background: var(--bg2); border: 1px solid var(--border); 
+  border-radius: 14px; overflow: hidden; transition: all .5s var(--ease); 
+} 
+.founder-card:hover { border-color: var(--gold-b); transform: translateY(-4px); } 
+.founder-img-wrap {   width: 100%; height: 220px;   overflow: hidden; background: var(--bg3);   display: flex; align-items: center; justify-content: center; 
+} 
+.founder-img-wrap img {   width: 100%; height: 100%;   object-fit: cover; object-position: top center;   display: block; 
+} 
+ 
+/* ===================== PORTFOLIO ===================== */ 
+.port-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; } 
+.port-card { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); background: var(--bg2); transition: all .4s var(--ease); cursor: pointer; } .port-card:hover { border-color: var(--gold-b); transform: translateY(-5px); } .port-card:hover .port-ov { opacity: 1; } 
+.port-screen { height: 190px; position: relative; overflow: hidden; } 
+.port-bar { height: 24px; background: rgba(255,255,255,.04); display: flex; align-items: 
+center; padding: 0 10px; gap: 5px; border-bottom: 1px solid var(--border); } 
+.dot { width: 6px; height: 6px; border-radius: 50%; } 
+.port-body { height: calc(190px - 24px); position: relative; overflow: hidden; } .port-ov { position: absolute; inset: 0; background: rgba(10,10,10,.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: .3s; backdrop-filter: 
+blur(4px); } 
+.port-info { padding: 16px 20px; } 
+.port-tag { font-family: var(--fm); font-size: .54rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-bottom: 4px; } 
+.port-name { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; } 
+.port-desc { font-size: .72rem; color: var(--muted); margin-top: 3px; } 
+.mock { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 16px; } .mbar { height: 4px; border-radius: 2px; } 
+.mrow { display: flex; gap: 5px; width: 100%; } 
+.mcard { border-radius: 5px; flex: 1; } 
+ 
+/* ===================== TESTIMONIAL ===================== */ 
+.testi { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); } 
+.testi-inner { max-width: 700px; margin: 0 auto; padding: 80px 5%; text-align: center; } .tq { font-family: var(--fd); font-size: clamp(1.2rem, 2.5vw, 1.8rem); font-weight: 300; font-style: italic; line-height: 1.55; margin-bottom: 28px; } 
+.tauth { display: flex; align-items: center; justify-content: center; gap: 13px; } 
+.tav { width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--gold-b); object-fit: cover; flex-shrink: 0; } 
+ 
+/* ===================== FAQ ===================== */ 
+.faq-list { margin-top: 44px; max-width: 720px; } 
+.faq-item { border-bottom: 1px solid var(--border); } 
+.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; cursor: pointer; font-weight: 700; font-size: .92rem; transition: color .3s; gap: 14px; } 
+.faq-q:hover { color: var(--gold); } 
+.faq-ico { width: 26px; height: 26px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .8rem; color: var(--muted); transition: all .35s; flex-shrink: 0; } 
+.faq-item.open .faq-ico { background: var(--gold); border-color: var(--gold); color: #000; transform: rotate(45deg); } 
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .5s var(--ease), padding .5s; color: var(--muted); font-size: .83rem; line-height: 1.75; } 
+.faq-item.open .faq-a { max-height: 200px; padding-bottom: 22px; } 
+ 
+/* ===================== CTA ===================== */ 
+.cta { text-align: center; padding: 72px 5% 80px; position: relative; overflow: hidden; } .cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 50% 
+50% at 50% 50%, rgba(201,168,76,.05) 0%, transparent 70%); pointer-events: none; } .cta-h { font-family: var(--fd); font-size: clamp(2.6rem, 6vw, 5.5rem); font-weight: 300; line-height: .92; margin-bottom: 22px; } 
+.cta-h em { color: var(--gold); font-style: italic; } 
+.stats-row { display: flex; justify-content: center; gap: 44px; flex-wrap: wrap; margin-top: 
+48px; align-items: center; } 
+.stat-n { font-family: var(--fd); font-size: 2.4rem; font-weight: 700; color: var(--gold); } .stat-l { font-family: var(--fm); font-size: .56rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-top: 3px; } 
+.sdiv { width: 1px; height: 44px; background: var(--border); } 
+ 
+/* HOLD BUTTON */ 
+.hold-wrap { display: inline-flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 40px; } 
+.hold-btn { width: 310px; height: 64px; position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; border: 1px solid var(--gold-b); background: transparent; user-select: none; 
+-webkit-user-select: none; touch-action: none; } 
+.hold-fill { position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: var(--gold); 
+} 
+.hold-txt { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 800; font-size: .68rem; letter-spacing: 2.5px; text-transform: uppercase; z-index: 2; color: var(--text); pointer-events: none; transition: color .1s; } .hold-hint { font-family: var(--fm); font-size: .56rem; letter-spacing: 2px; color: var(--muted); text-transform: uppercase; } 
+ 
+/* ===================== FOOTER ===================== */ 
+footer { border-top: 1px solid var(--border); padding: 48px 5%; } 
+.foot { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; } 
+.fl { font-family: var(--fd); font-size: 1.15rem; font-weight: 600; } 
+.fl em { color: var(--gold); font-style: normal; } 
+.flinks { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; } .flinks a { font-size: .62rem; letter-spacing: 2px; text-transform: uppercase; color: 
+var(--muted); transition: color .3s; } 
+.flinks a:hover { color: var(--gold); } 
+.fsoc { display: flex; gap: 10px; justify-content: flex-end; } 
+.sb2 { width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; display: 
+flex; align-items: center; justify-content: center; color: var(--muted); transition: all .3s; } 
+.sb2:hover { border-color: var(--gold-b); color: var(--gold); } 
+.fcopy { text-align: center; font-family: var(--fm); font-size: .54rem; letter-spacing: 3px; color: var(--muted); text-transform: uppercase; margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--border); } 
+#clk { color: var(--gold); } 
+ 
+/* FLOATING WA */ 
+.fwa { position: fixed; bottom: 24px; right: 20px; z-index: 700; } 
+.fwa-btn { width: 54px; height: 54px; background: #25D366; border-radius: 14px; display: 
+flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.35); transition: all .3s; animation: wap 3s infinite; } 
+.fwa-btn:hover { transform: scale(1.1); } 
+@keyframes wap { 0%,100% { box-shadow: 0 6px 24px rgba(37,211,102,.35); } 50% { box-shadow: 0 6px 40px rgba(37,211,102,.6); } } 
+ 
+/* ===================== SIDEBAR ===================== */ 
+#sb { position: fixed; top: 0; left: 0; width: 272px; height: 100%; background: 
+rgba(10,10,10,.98); backdrop-filter: blur(28px); -webkit-backdrop-filter: blur(28px); z-index: 900; transform: translateX(-100%); transition: transform .5s cubic-bezier(.8,0,.2,1); border-right: 1px solid var(--gold-b); display: flex; flex-direction: column; overflow-y: auto; } body.light #sb { background: rgba(245,242,238,.98); } 
+#sb.on { transform: translateX(0); } 
+.sb-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 
+24px; border-bottom: 1px solid var(--border); flex-shrink: 0; } 
+.sb-nav { display: flex; flex-direction: column; flex: 1; padding: 8px 0; } 
+.sb-nav a { font-family: var(--fu); font-size: .72rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; padding: 13px 24px; border-bottom: 1px solid var(--border); transition: color .25s, background .25s, padding-left .25s; color: var(--muted); display: flex; align-items: center; gap: 10px; } 
+.sb-nav a::before { content: ''; width: 14px; height: 1px; background: currentColor; opacity: 
+.35; transition: width .25s; flex-shrink: 0; } 
+.sb-nav a:hover { color: var(--gold); padding-left: 32px; background: rgba(201,168,76,.04); } 
+.sb-nav a:hover::before { width: 20px; opacity: 1; } 
+.sb-foot { padding: 18px 24px; border-top: 1px solid var(--border); flex-shrink: 0; } 
+/* Sidebar button — clean, not bhadda */ 
+.sb-wa-btn {   display: flex; align-items: center; justify-content: center; gap: 8px;   width: 100%; padding: 12px 16px;   background: transparent;   border: 1px solid var(--gold-b);   border-radius: 8px; color: var(--gold);   font-family: var(--fu); font-size: .68rem; font-weight: 700;   letter-spacing: 2px; text-transform: uppercase;   transition: all .3s; 
+} 
+.sb-wa-btn:hover { background: var(--gold); color: #0a0a0a; } 
+.sb-founder { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px; background: rgba(201,168,76,.05); border-radius: 8px; border: 1px solid var(--gold-b); } .sb-founder img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; object-position: top; flex-shrink: 0; border: 1.5px solid var(--gold-b); } 
+ 
+.ov { position: fixed; inset: 0; background: rgba(0,0,0,.7); backdrop-filter: blur(6px); z-index: 
+850; opacity: 0; visibility: hidden; transition: .4s; } 
+.ov.on { opacity: 1; visibility: visible; } 
+ 
+/* ===================== REVEAL ===================== */ 
+/* Safe approach: transform only, never hide content permanently */ 
+.rv { opacity: 0; transform: translateY(28px); transition: opacity .75s var(--ease), transform .75s var(--ease); } 
+.rv.go { opacity: 1; transform: translateY(0); } 
+.rv.d1 { transition-delay: .1s; } 
+.rv.d2 { transition-delay: .2s; } 
+.rv.d3 { transition-delay: .3s; } 
+/* Fallback: if JS fails or slow — show everything after 2s */ 
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1 !important; transform: none !important; } } 
+ 
+/* ===================== RAZORPAY PAYMENT ===================== */ 
+.pay-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 64px 5%; } 
+.pay-inner { max-width: 1000px; margin: 0 auto; } 
+.pay-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 44px; } 
+.pay-card { 
+  background: var(--bg); border: 1px solid var(--border);   border-radius: 16px; padding: 28px 24px; text-align: center;   transition: all .35s var(--ease); position: relative; 
+} 
+.pay-card:hover { border-color: var(--gold-b); transform: translateY(-3px); } .pay-card.featured-pay { border-color: var(--gold-b); background: 
+linear-gradient(160deg,rgba(201,168,76,.06),var(--bg)); } 
+.pay-plan-name { font-family: var(--fm); font-size: .55rem; letter-spacing: 3px; color: 
+var(--muted); text-transform: uppercase; margin-bottom: 10px; } 
+.pay-amount { font-family: var(--fd); font-size: 2.4rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 4px; } 
+.pay-desc { font-size: .72rem; color: var(--muted); margin-bottom: 20px; } 
+.pay-btn {   display: flex; align-items: center; justify-content: center; gap: 7px;   width: 100%; padding: 13px;   background: var(--gold); color: #0a0a0a;   border: none; border-radius: 8px; cursor: pointer;   font-family: var(--fu); font-size: .68rem; font-weight: 800;   letter-spacing: 2px; text-transform: uppercase;   transition: all .3s; 
+} 
+.pay-btn:hover { background: var(--gold2); transform: translateY(-1px); } 
+.pay-btn:active { transform: scale(.98); } 
+.pay-secure { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; font-family: var(--fm); font-size: .52rem; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; } 
+.pay-note { text-align: center; margin-top: 28px; padding: 14px 20px; background: 
+rgba(201,168,76,.04); border: 1px solid var(--gold-b); border-radius: 10px; } .pay-note p { font-family: var(--fm); font-size: .58rem; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; line-height: 1.8; } 
+.pay-note p strong { color: var(--gold); } 
+ 
+/* ===================== MODAL ===================== */ 
+.modal-overlay {   position: fixed; inset: 0; background: rgba(0,0,0,.85);   backdrop-filter: blur(10px); z-index: 9999;   display: flex; align-items: flex-end;   opacity: 0; visibility: hidden; transition: all .4s var(--ease); 
+} 
+.modal-overlay.show { opacity: 1; visibility: visible; } 
+.modal-box {   width: 100%; max-width: 680px; margin: 0 auto;   background: var(--bg2); border-top: 1px solid var(--gold-b);   border-radius: 20px 20px 0 0; padding: 0;   max-height: 85vh; overflow: hidden;   display: flex; flex-direction: column;   transform: translateY(100%); transition: transform .5s var(--ease); 
+} 
+.modal-overlay.show .modal-box { transform: translateY(0); } 
+.modal-head { 
+  display: flex; align-items: center; justify-content: space-between;   padding: 20px 28px; border-bottom: 1px solid var(--border);   flex-shrink: 0; 
+} 
+.modal-title { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; } 
+.modal-close {   width: 32px; height: 32px; border-radius: 50%;   background: var(--border); border: none; cursor: pointer;   color: var(--text); display: flex; align-items: center; justify-content: center;   font-size: .8rem; transition: .3s; 
+} 
+.modal-close:hover { background: var(--gold); color: #000; } 
+.modal-body { padding: 28px; overflow-y: auto; flex: 1; } 
+.modal-body h3 { font-family: var(--fd); font-size: 1.1rem; font-weight: 600; color: var(--gold); margin: 20px 0 8px; } 
+.modal-body h3:first-child { margin-top: 0; } 
+.modal-body p { font-size: .82rem; color: var(--muted); line-height: 1.8; margin-bottom: 10px; 
+} 
+.modal-body ul { padding-left: 16px; margin-bottom: 10px; } 
+.modal-body ul li { font-size: .82rem; color: var(--muted); line-height: 1.8; margin-bottom: 4px; 
+} 
+.modal-drag { width: 40px; height: 4px; background: var(--border); border-radius: 2px; margin: 12px auto 0; } 
+@media(max-width:650px){.pay-grid{grid-template-columns:1fr;}.modal-box{max-height:92v h;border-radius:16px 16px 0 0;}} 
+@media (max-width: 900px) { 
+  .svc-grid { grid-template-columns: 1fr 1fr; } 
+  .proc-vis { display: none; } 
+  .proc-wrap { grid-template-columns: 1fr; } 
+  .port-grid { grid-template-columns: 1fr 1fr; } 
+  .foot { grid-template-columns: 1fr; text-align: center; } 
+  .fsoc { justify-content: center; } 
+} 
+ 
+@media (max-width: 650px) { 
+  :root { --hh: 60px; }   h1.hh { font-size: clamp(2.2rem, 8vw, 2.8rem); letter-spacing: -.5px; } 
+  .hero-btns { flex-direction: column; gap: 10px; } 
+  .btn-g, .btn-o { justify-content: center; width: 100%; max-width: 300px; } 
+  .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); } 
+  .hero-stat { border-right: 1px solid rgba(201,168,76,.1) !important; } 
+  .hero-stat:last-child { border-right: none !important; } 
+  .hg { grid-template-columns: 1fr; } 
+  .hi { border-right: none; border-bottom: 1px solid var(--gold-b); } 
+  .hi:last-child { border-bottom: none; } 
+  .svc-grid { grid-template-columns: 1fr; } 
+  .proof-grid { grid-template-columns: 1fr; } 
+  .port-grid { grid-template-columns: 1fr; } 
+  .pricing-grid { grid-template-columns: 1fr; } 
+  .pricing-grid .price-card:nth-child(2) { transform: none; } 
+  .hold-btn { width: 88vw; } 
+  .stats-row { gap: 20px; } 
+  .sdiv { height: 32px; } 
+  .sec { padding: 64px 5%; } 
+  .cta { padding: 72px 5%; } 
+  .poster { padding: 32px 24px; } 
+  .poster-card { display: none; } 
+} 
+ 
+@media (min-width: 651px) and (max-width: 900px) { 
+  .pricing-grid { grid-template-columns: 1fr 1fr; } 
+  .pricing-grid .price-card:nth-child(2) { transform: none; } 
+  .pricing-grid .price-card:nth-child(3) { grid-column: span 2; } 
+} 
+</style> 
+</head> 
+<body> 
+<!-- Cursor --> 
+<div class="cur" id="cur"></div> 
+<div class="cur-r" id="cur-r"></div> 
+ 
+<!-- Floating WA --> 
+<div class="fwa"> 
+  <a class="fwa-btn" href="https://wa.me/919918996096?text=Hey%20Ansh%2C%20I%20want%20a%20free%2
+0demo!" target="_blank" rel="noopener" aria-label="WhatsApp"> 
+    <svg width="25" height="25" viewBox="0 0 24 24" fill="white"><path d="M17.472 
+14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 
+1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.6
+53-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.49 7.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.17
+3-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 
+1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 
+1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 
+2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 
+7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 
+9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 
+2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 
+9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 
+2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 
+1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> 
+  </a> 
+</div> 
+ 
+<div class="ov" id="ov" onclick="closeSb()"></div> 
+ 
+<!-- Sidebar --> 
+<aside id="sb"> 
+  <div class="sb-head"> 
+    <span class="logo" style="font-size:1.05rem;">Caption <em>Studio</em></span> 
+    <button onclick="closeSb()" class="icon-btn" 
+style="width:32px;height:32px;font-size:.75rem;">✕</button> 
+  </div> 
+  <nav class="sb-nav"> 
+    <a href="#home" onclick="closeSb()">Home</a> 
+    <a href="#pricing" onclick="closeSb()">Pricing</a> 
+    <a href="#services" onclick="closeSb()">Services</a> 
+    <a href="#process" onclick="closeSb()">Process</a> 
+    <a href="#proof" onclick="closeSb()">Evidence</a> 
+    <a href="#portfolio" onclick="closeSb()">Portfolio</a> 
+    <a href="#faq" onclick="closeSb()">FAQ</a> 
+  </nav> 
+  <div class="sb-foot"> 
+    <a href="https://wa.me/919918996096?text=Free%20Caption" class="sb-wa-btn" target="_blank" rel="noopener" onclick="closeSb()"> 
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 
+14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 
+1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.6
+53-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.49 7.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.17
+3-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 
+1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 
+1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 
+2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 
+7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 
+9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 
+2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 
+9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 
+2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 
+1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> 
+      Free Caption 
+    </a> 
+    <div class="sb-founder"> 
+      <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" alt="Ansh Yadav" loading="lazy">       <div> 
+        <div style="font-weight:700;font-size:.8rem;">Ansh Yadav</div> 
+        <div 
+style="font-size:.58rem;color:var(--muted);letter-spacing:1px;margin-top:2px;">Founder & Strategist</div> 
+      </div> 
+    </div>   </div> 
+</aside> 
+ 
+<!-- Header --> 
+<header id="hdr"> 
+  <a href="#home" class="logo">Caption <em>Studio</em></a> 
+  <nav> 
+    <a href="#pricing">Pricing</a> 
+    <a href="#services">Services</a> 
+    <a href="#proof">Evidence</a> 
+    <a href="#portfolio">Portfolio</a> 
+    <a href="https://wa.me/919918996096?text=Hey%20I%20want%20a%20free%20demo" class="nav-cta" target="_blank" rel="noopener">Book Demo</a> 
+  </nav> 
+  <div class="hdr-r"> 
+    <button class="icon-btn" id="tbtn" onclick="toggleTheme()" aria-label="Toggle theme"><span id="ti">🌙</span></button> 
+    <button class="icon-btn menu-btn" onclick="openSb()" aria-label="Menu"> 
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none"><rect y="0" width="17" height="1.5" rx=".75" fill="currentColor"/><rect y="5.25" width="17" height="1.5" rx=".75" fill="currentColor"/><rect y="10.5" width="17" height="1.5" rx=".75" fill="currentColor"/></svg> 
+    </button> 
+  </div> 
+</header> 
+ 
+<main> 
+<!-- ===== HERO ===== --> 
+<section class="hero" id="home"> 
+  <div class="hero-grid"></div> 
+  <div class="hero-orb" style="width:480px;height:480px;top:-20%;right:-8%;background:radial-gradient(circle,rgba(2
+01,168,76,.14) 0%,transparent 70%);"></div> 
+  <div class="hero-orb" style="width:340px;height:340px;bottom:5%;left:-6%;background:radial-gradient(circle,rgba(
+140,80,10,.1) 0%,transparent 70%);animation-delay:-7s;"></div> 
+  <!-- Decorative corners --> 
+  <div style="position:absolute;top:calc(var(--hh) + 
+16px);right:5%;width:100px;height:100px;border-top:1px solid rgba(201,168,76,.18);border-right:1px solid rgba(201,168,76,.18);pointer-events:none;z-index:1;"></div> 
+ 
+  <div class="hero-inner"> 
+    <div class="tag">Premium Agency · Est. 2024</div> 
+    <h1 class="hh">Get Your 
+Business<br><em>Online</em><br><strong>Today.</strong></h1> 
+    <p class="hero-sub">Affordable, fast & beginner-friendly websites. Starting ₹999. No hidden charges, no drama — just results.</p> 
+    <div class="hero-btns"> 
+      <a 
+href="https://wa.me/919918996096?text=Hey%20Ansh%2C%20I%20want%20a%20free%2
+0demo!" class="btn-g" target="_blank" rel="noopener"> 
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 
+14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 
+1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.6
+53-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.49 7.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.17
+3-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 
+1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 
+1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 
+2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 
+7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 
+9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 
+2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 
+9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 
+2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 
+1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> 
+        Book Free Demo 
+      </a> 
+      <a href="#proof" class="btn-o">See Our Work ↓</a> 
+    </div> 
+    <div class="hero-stats"> 
+      <div class="hero-stat"><div class="hero-stat-n">₹999</div><div class="hero-stat-l">Starts From</div></div> 
+      <div class="hero-stat"><div class="hero-stat-n">48hrs</div><div class="hero-stat-l">Delivery</div></div> 
+      <div class="hero-stat"><div class="hero-stat-n">50+</div><div class="hero-stat-l">Clients</div></div> 
+    </div> 
+  </div> 
+</section> 
+ 
+<!-- MARQUEE --> 
+<div class="mq"> 
+  <div class="mq-track"> 
+    <div class="mq-item">Websites from ₹999 <b>✦</b></div><div class="mq-item">No 
+Hidden Charges <b>✦</b></div><div class="mq-item">48 Hour Delivery <b>✦</b></div><div class="mq-item">Free Domain Guidance <b>✦</b></div><div class="mq-item">Mobile First <b>✦</b></div><div class="mq-item">Beginner Friendly <b>✦</b></div><div class="mq-item">WhatsApp Support <b>✦</b></div><div class="mq-item">SEO Optimised <b>✦</b></div> 
+    <div class="mq-item">Websites from ₹999 <b>✦</b></div><div class="mq-item">No 
+Hidden Charges <b>✦</b></div><div class="mq-item">48 Hour Delivery <b>✦</b></div><div class="mq-item">Free Domain Guidance <b>✦</b></div><div class="mq-item">Mobile First <b>✦</b></div><div class="mq-item">Beginner Friendly <b>✦</b></div><div class="mq-item">WhatsApp Support <b>✦</b></div><div class="mq-item">SEO Optimised <b>✦</b></div> 
+  </div> 
+</div> 
+ 
+<!-- HOOK BAND --> 
+<div class="hook-band"> 
+  <div class="hg"> 
+    <div class="hi rv"><span class="hn">₹999</span><span class="hl">Starter Price</span><p class="hd">Single page landing site for local shops, freelancers & campaigns.</p></div> 
+    <div class="hi rv d1"><span class="hn">48hrs</span><span class="hl">Fast Delivery</span><p class="hd">Your site goes live in under 2 days. Speed is our promise.</p></div> 
+    <div class="hi rv d2"><span class="hn">0</span><span class="hl">Hidden Charges</span><p class="hd">What we quote is what you pay. No surprises, ever.</p></div> 
+  </div> 
+</div> 
+ 
+<!-- TRUST TAGS --> 
+<div class="trust-strip"> 
+  <span class="trust-tag">✓ No Hidden Charges</span> 
+  <span class="trust-tag">✓ Free Domain Guidance</span> 
+  <span class="trust-tag">✓ WhatsApp Support</span> 
+  <span class="trust-tag">✓ Beginner Friendly</span> 
+  <span class="trust-tag">✓ 30-Day Free Support</span> 
+  <span class="trust-tag">✓ Mobile Responsive</span> 
+</div> 
+ 
+<!-- BRAND POSTER --> 
+<div class="poster-wrap rv" style="margin-top:48px;"> 
+  <div class="poster"> 
+    <div class="poster-text"> 
+      <div class="poster-sub">Growth-Oriented · Affordable · Fast</div> 
+      <h2 class="poster-h">Get Your Business<br><em>Online Today.</em></h2> 
+      <p class="poster-p">Beginner se lekar growing business tak — hum aapko support karte hain. Affordable pricing, express delivery, zero hidden fees.</p> 
+      <div class="poster-pills"> 
+        <div class="poster-pill"><div class="poster-pill-t">AFFORDABLE</div><div class="poster-pill-s">Pricing</div></div> 
+        <div class="poster-pill"><div class="poster-pill-t">EXPRESS</div><div class="poster-pill-s">Delivery</div></div> 
+        <div class="poster-pill"><div class="poster-pill-t">ZERO</div><div class="poster-pill-s">Hidden Fees</div></div> 
+      </div> 
+    </div> 
+    <div class="poster-card"> 
+      <span style="font-size:2.2rem;">💎</span> 
+      <div style="font-family:var(--fm);font-size:.52rem;color:var(--gold);margin-top:8px;letter-spacing:3 px;">CAPTION STUDIO</div> 
+      <div style="font-family:var(--fm);font-size:.46rem;color:var(--muted);margin-top:3px;letter-spacing: 2px;">EST. 2024</div> 
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- PRICING --> 
+<div class="sec" id="pricing"> 
+  <div class="lbl rv">Pricing</div> 
+  <h2 class="st rv">Plans for every<br><em>stage of growth.</em></h2> 
+  <p class="rv" style="color:var(--muted);font-size:.85rem;margin-top:10px;max-width:480px;line-height:1.7;"
+>No hidden charges. No surprises. Just the price we quote.</p> 
+  <div class="pricing-grid"> 
+    <div class="price-card rv"> 
+      <div class="price-plan">Starter</div> 
+      <div class="price-n">₹999</div> 
+      <div class="price-sub">Single landing page</div> 
+      <div class="price-div"></div> 
+      <ul class="price-feat"> 
+        <li><span class="chk">✓</span> 1 Page Website</li> 
+        <li><span class="chk">✓</span> Mobile Responsive</li> 
+        <li><span class="chk">✓</span> WhatsApp Button</li> 
+        <li><span class="chk">✓</span> Free Domain Guidance</li> 
+        <li><span class="chk">✓</span> No Hidden Charges</li> 
+      </ul> 
+      <a href="https://wa.me/919918996096?text=Starter%20Plan%20-%20999" class="btn-o" style="width:100%;justify-content:center;font-size:.66rem;" target="_blank" rel="noopener">Get Started →</a> 
+    </div> 
+    <div class="price-card featured rv d1"> 
+      <div class="price-badge">Most Popular</div> 
+      <div class="price-plan" style="color:var(--gold);">Essential ⭐</div> 
+      <div class="price-n">₹2,999</div> 
+      <div class="price-sub">2–3 page business site</div> 
+      <div class="price-div" style="background:var(--gold-b);"></div> 
+      <ul class="price-feat"> 
+        <li><span class="chk">✓</span> Home, Services, Contact</li> 
+        <li><span class="chk">✓</span> Mobile + SEO Ready</li> 
+        <li><span class="chk">✓</span> WhatsApp Integration</li> 
+        <li><span class="chk">✓</span> Free Domain Guidance</li> 
+        <li><span class="chk">✓</span> 15-Day Support</li> 
+      </ul> 
+      <a href="https://wa.me/919918996096?text=Essential%20Plan%20-%202999" class="btn-g" style="width:100%;justify-content:center;font-size:.66rem;" target="_blank" rel="noopener">Best Value →</a> 
+    </div> 
+    <div class="price-card rv d2"> 
+      <div class="price-plan">Premium</div> 
+      <div class="price-n">₹4,999<span style="font-size:1.3rem;">+</span></div> 
+      <div class="price-sub">Full business website</div> 
+      <div class="price-div"></div> 
+      <ul class="price-feat"> 
+        <li><span class="chk">✓</span> 5+ Pages, Custom Design</li> 
+        <li><span class="chk">✓</span> Advanced SEO & Analytics</li> 
+        <li><span class="chk">✓</span> E-Commerce / Booking</li>         <li><span class="chk">✓</span> Free Domain Guidance</li> 
+        <li><span class="chk">✓</span> 30-Day Priority Support</li> 
+      </ul> 
+      <a href="https://wa.me/919918996096?text=Premium%20Plan%20inquiry" class="btn-o" style="width:100%;justify-content:center;font-size:.66rem;" target="_blank" rel="noopener">Let's Talk →</a> 
+    </div> 
+  </div> 
+  <div class="price-trust rv" style="margin-top:20px;"> 
+    <p><span>✓</span> No Hidden Charges &nbsp;·&nbsp; <span>✓</span> Free Domain 
+Guidance &nbsp;·&nbsp; <span>✓</span> WhatsApp Support &nbsp;·&nbsp; 
+<span>✓</span> Beginner Friendly</p> 
+  </div> 
+</div> 
+ 
+<!-- SERVICES --> 
+<div class="sec" id="services"> 
+  <div class="lbl rv">What We Do</div> 
+  <h2 class="st rv">Everything your brand<br><em>needs to grow.</em></h2> 
+  <div class="svc-grid"> 
+    <div class="svc rv"><span class="svc-n">01</span><span class="svc-ico">🖥</span><div class="svc-name">Website Design</div><p class="svc-desc">Glassmorphism, Matte Black, Neomorphism — every UI element engineered to build trust and drive action.</p></div> 
+    <div class="svc rv d1"><span class="svc-n">02</span><span class="svc-ico">✍</span><div class="svc-name">Caption Ghostwriting</div><p class="svc-desc">Psychological hooks and neuromarketing copy. Turns your Instagram into a high-ticket client magnet.</p></div> 
+    <div class="svc rv d2"><span class="svc-n">03</span><span class="svc-ico">👑</span><div class="svc-name">Personal Brand Systems</div><p class="svc-desc">Full authority positioning. Content pillars to bio optimization. From creator to Category King.</p></div> 
+    <div class="svc rv"><span class="svc-n">04</span><span class="svc-ico">⚡</span><div class="svc-name">Landing Pages</div><p class="svc-desc">High-conversion landing pages for offers, ads, and funnels. Every click counts.</p></div> 
+    <div class="svc rv d1"><span class="svc-n">05</span><span class="svc-ico">🔍</span><div class="svc-name">SEO & Performance</div><p class="svc-desc">Optimized for Google from day one. Fast loading, clean code, mobile-first.</p></div> 
+    <div class="svc rv d2"><span class="svc-n">06</span><span class="svc-ico">🛡</span><div class="svc-name">30-Day Support</div><p class="svc-desc">Updates, tweaks, edits — 30 days of dedicated support included in every package.</p></div> 
+  </div> 
+</div> 
+ 
+<!-- PROCESS --> 
+<div class="sec" id="process"> 
+  <div class="lbl rv">How We Work</div> 
+  <h2 class="st rv">Brief to <em>live</em><br>in 48 hours.</h2> 
+  <div class="proc-wrap"> 
+    <div> 
+      <div class="proc-item rv sel" onclick="setPv('🔍','Discovery Call','We audit your brand, goals, and audience. 30-minute call — no fluff, all clarity.',this)"> 
+        <div class="pn">01</div><div class="pc"><h3>Discovery Call</h3><p>We audit your brand and audience. 30-minute call, all clarity.</p></div> 
+      </div> 
+      <div class="proc-item rv d1" onclick="setPv('⚡','Design Sprint','Wireframes approved in 
+4 hours. Then we build. No delays.',this)"> 
+        <div class="pn">02</div><div class="pc"><h3>Design Sprint</h3><p>Wireframes approved in 4 hours. Then we build. No delays.</p></div> 
+      </div> 
+      <div class="proc-item rv d2" onclick="setPv('🚀','Build & Optimize','Code-clean, 
+SEO-ready, blazing fast. PageSpeed 90+ is our baseline.',this)"> 
+        <div class="pn">03</div><div class="pc"><h3>Build & Optimize</h3><p>Code-clean, SEO-ready, blazing fast. PageSpeed 90+.</p></div> 
+      </div> 
+      <div class="proc-item rv d3" onclick="setPv('💰','Launch & Scale','Go live with analytics, 
+WhatsApp CTA, and pixels in place.',this)"> 
+        <div class="pn">04</div><div class="pc"><h3>Launch & Scale</h3><p>Go live with analytics, WhatsApp CTA, and pixels. Revenue from day one.</p></div> 
+      </div> 
+    </div> 
+    <div class="proc-vis"> 
+      <span class="pvi" id="pvi">🔍</span> 
+      <h3 id="pvt" style="font-family:var(--fd);font-size:1.55rem;margin-bottom:8px;">Discovery Call</h3> 
+      <p id="pvd" style="color:var(--muted);font-size:.82rem;line-height:1.7;">We audit your brand, goals, and audience. 30-minute call — no fluff, all clarity.</p> 
+      <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">         <a href="https://wa.me/919918996096?text=I%20want%20to%20start" class="btn-g" style="width:100%;justify-content:center;" target="_blank" rel="noopener">Start Now →</a> 
+      </div> 
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- PROOF --> 
+<div class="sec" id="proof"> 
+  <div class="lbl rv">Real Results</div> 
+  <h2 class="st rv">Numbers that<br><em>prove it.</em></h2> 
+  <div class="proof-grid"> 
+    <div class="proof-card rv"> 
+      <img src="https://i.ibb.co/jPkgSvP8/Screenshot-2026-03-15-10-35-56-52-40deb401b9ffe8e1df2f1c c5ba480b12.jpg" class="proof-img" loading="lazy" alt="Instagram reach">       <div class="proof-info"><div><div class="proof-stat">+48.4K</div><div class="proof-lbl">Accounts Reached</div></div><div class="proof-badge">Verified 
+✓</div></div> 
+    </div> 
+    <div class="proof-card rv d1"> 
+      <img 
+src="https://i.ibb.co/Tx37X7Qh/Screenshot-2026-03-15-10-35-33-85-40deb401b9ffe8e1df2f1 cc5ba480b12.jpg" class="proof-img" loading="lazy" alt="Instagram growth">       <div class="proof-info"><div><div class="proof-stat">2100%</div><div class="proof-lbl">Follower Growth</div></div><div class="proof-badge">Real Data 
+✓</div></div> 
+    </div> 
+    <div class="proof-card rv d2"> 
+      <img src="https://i.ibb.co/jv2F8hjB/Screenshot-2026-03-13-11-28-24-56-40deb401b9ffe8e1df2f1cc
+5ba480b12.jpg" class="proof-img" loading="lazy" alt="Engagement proof"> 
+      <div class="proof-info"><div><div class="proof-stat">↑ Reach</div><div class="proof-lbl">Engagement Lift</div></div><div class="proof-badge">Client 
+✓</div></div> 
+    </div> 
+    <!-- FOUNDER CARD — FIXED: proper img display, no crop --> 
+    <div class="founder-card rv d3"> 
+      <div class="founder-img-wrap"> 
+        <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" alt="Ansh Yadav — Founder Caption 
+Studio" loading="lazy"> 
+      </div> 
+      <div class="proof-info"><div><div class="proof-stat">Ansh Yadav</div><div class="proof-lbl">Founder & Lead Strategist</div></div><div class="proof-badge">50+ Clients ✓</div></div> 
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- PORTFOLIO --> 
+<div class="sec" id="portfolio"> 
+  <div class="lbl rv">Our Work</div> 
+  <h2 class="st rv">Websites we<br><em>design & build.</em></h2> 
+  <div class="port-grid"> 
+    <div class="port-card rv"> 
+      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#0f0c08,#1a100a);"><div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8B45 13,#D4A44C);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">☕</div ><div class="mbar" style="background:#D4A44C;opacity:.7;width:60px;"></div><div class="mbar" style="background:rgba(255,255,255,.15);width:44px;"></div><div class="mrow" style="margin-top:5px;"><div class="mcard" style="height:22px;background:rgba(212,164,76,.12);border:1px solid rgba(212,164,76,.2);"></div><div class="mcard" style="height:22px;background:rgba(212,164,76,.12);border:1px solid rgba(212,164,76,.2);"></div></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=cafe+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine 
+↗</a></div></div></div> 
+      <div class="port-info"><div class="port-tag">Restaurant · F&amp;B</div><div class="port-name">Cafe & Restaurant</div><div class="port-desc">Menu, booking, 
+WhatsApp orders</div></div> 
+    </div> 
+    <div class="port-card rv d1"> 
+      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#090914,#0d0d22);"><img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" alt="Portfolio mockup" style="width:34px;height:34px;border-radius:50%;border:2px solid rgba(201,168,76,.4);object-fit:cover;object-position:top;"><div class="mbar" style="background:var(--gold);opacity:.7;width:56px;"></div><div class="mbar" style="background:rgba(255,255,255,.1);width:72px;"></div><div class="mrow" style="margin-top:6px;"><div class="mcard" style="height:18px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);"></div><div class="mcard" style="height:18px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);"></div><div class="mcard" style="height:18px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);"></div></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=portfolio+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine 
+↗</a></div></div></div> 
+      <div class="port-info"><div class="port-tag">Personal · Freelancer</div><div class="port-name">Portfolio Website</div><div class="port-desc">Projects, skills, contact form</div></div> 
+    </div> 
+    <div class="port-card rv d2"> 
+      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#080810,#141428);"><div style="font-family:'Cormorant 
+Garamond',serif;font-size:.82rem;color:rgba(201,168,76,.8);letter-spacing:2px;">Launch Now</div><div class="mbar" style="background:rgba(255,255,255,.8);height:6px;width:68px;border-radius:4px;"></div><d iv class="mbar" style="background:rgba(255,255,255,.18);width:82px;height:4px;"></div><div style="height:20px;width:72px;border-radius:4px;background:linear-gradient(90deg,#c9a84c,
+#e8c97a);margin-top:7px;"></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=landing+page" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine 
+↗</a></div></div></div> 
+      <div class="port-info"><div class="port-tag">Ads · Funnels</div><div class="port-name">Landing Page</div><div class="port-desc">High-converting, built for ad traffic</div></div> 
+    </div> 
+    <div class="port-card rv"> 
+      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#0a0a0a,#181210);"><div style="width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#c9a8
+4c,#8B6914);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">👑</div ><div class="mbar" style="background:rgba(201,168,76,.7);width:58px;"></div><div class="mbar" style="background:rgba(255,255,255,.12);width:78px;"></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=brand+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine 
+↗</a></div></div></div> 
+      <div class="port-info"><div class="port-tag">Personal Brand · Coach</div><div class="port-name">Brand Website</div><div class="port-desc">Authority positioning, client magnet</div></div> 
+    </div> 
+    <div class="port-card rv d1"> 
+      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#080f08,#0d1a0d);"><div class="mrow"><div style="flex:1;height:36px;border-radius:5px;background:rgba(16,185,129,.12);border:1px solid 
+rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;">
+🛍</div><div style="flex:1;height:36px;border-radius:5px;background:rgba(16,185,129,.12);border:1px solid 
+rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;">
+👟</div></div><div class="mbar" style="background:rgba(16,185,129,.6);width:60px;height:4px;"></div><div style="height:18px;width:68px;border-radius:4px;background:rgba(16,185,129,.7);font-size:.
+5rem;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">BUY NOW</div></div><div class="port-ov"><a 
+href="https://wa.me/919918996096?text=ecommerce+website" class="btn-g" 
+style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine 
+↗</a></div></div></div> 
+      <div class="port-info"><div class="port-tag">E-Commerce · Store</div><div class="port-name">Online Shop</div><div class="port-desc">Catalog, cart, payment integration</div></div> 
+    </div> 
+    <div class="port-card rv d2"> 
+      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#080a14,#0a0d1e);"><div class="mrow" style="margin-bottom:4px;"><div class="mcard" style="height:18px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2);"></div><div class="mcard" style="height:18px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2);"></div><div class="mcard" style="height:18px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2);"></div></div><div style="height:36px;width:100%;border-radius:6px;background:linear-gradient(135deg,rgba(9 9,102,241,.2),rgba(139,92,246,.15));border:1px solid rgba(99,102,241,.2);"></div><div style="display:flex;gap:5px;margin-top:5px;"><div style="height:14px;width:44px;border-radius:3px;background:rgba(99,102,241,.7);"></div><d iv 
+style="height:14px;width:44px;border-radius:3px;background:rgba(255,255,255,.06);border:1 px solid rgba(99,102,241,.2);"></div></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=agency+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine 
+↗</a></div></div></div> 
+      <div class="port-info"><div class="port-tag">SaaS · Agency</div><div class="port-name">Agency / SaaS Site</div><div class="port-desc">Dashboard feel, glassmorphism UI</div></div> 
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- TESTIMONIAL --> 
+<div class="testi"> 
+  <div class="testi-inner"> 
+    <div class="lbl rv" style="justify-content:center;">Social Proof</div> 
+    <blockquote class="tq rv">"Ansh delivered the entire website in under 48 hours. The design was beyond what I imagined — and the WhatsApp leads started coming in the same week."</blockquote> 
+    <div class="tauth rv"> 
+      <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" class="tav" alt="Client" loading="lazy"> 
+      <div><div style="font-weight:700;font-size:.82rem;">Early Client</div><div 
+style="font-size:.64rem;color:var(--muted);letter-spacing:1px;margin-top:2px;">Founder · Local Business · Delhi NCR</div></div> 
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- FAQ --> 
+<div class="sec" id="faq"> 
+  <div class="lbl rv">FAQs</div> 
+  <h2 class="st rv">Common<br><em>questions.</em></h2> 
+  <div class="faq-list"> 
+    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">How much does a website cost? <div class="faq-ico">+</div></div><div class="faq-a">Starting at ₹999 for a landing page. Essential 2–3 page site at ₹2,999. Full business websites from ₹4,999. All packages include mobile optimization, SEO, and support. No hidden charges.</div></div>     <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Can you really deliver in 48 hours? <div class="faq-ico">+</div></div><div class="faq-a">Yes — for starter and essential sites. The clock starts once you approve the wireframe. Complex builds take 
+3–5 days but we always set clear timelines.</div></div> 
+    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Do you also handle Instagram content? <div class="faq-ico">+</div></div><div class="faq-a">Yes. Caption ghostwriting, content strategy, hook engineering — our core offer alongside websites.</div></div> 
+    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Will the site work on mobile? <div class="faq-ico">+</div></div><div class="faq-a">100% mobile-first. Tested across iOS, Android, and all screen sizes. Google PageSpeed 90+ is our standard.</div></div> 
+    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">How do I get started? <div class="faq-ico">+</div></div><div class="faq-a">Hit the WhatsApp button and say "Free Demo." We'll schedule a 30-minute call and share a proposal the same day. Zero pressure.</div></div> 
+  </div> 
+</div> 
+ 
+<!-- CTA --> 
+<div class="cta"> 
+  <div class="lbl rv" style="justify-content:center;">Start Today</div> 
+  <h2 class="cta-h rv">Ready to get<br><em>online today?</em></h2> 
+  <p class="rv" style="color:var(--muted);font-size:.88rem;max-width:400px;margin:14px auto 0;line-height:1.75;">₹999 · 48 hours · No hidden charges. Hold the button to start your free audit.</p> 
+  <div class="hold-wrap rv"> 
+    <div class="hold-btn" id="hbtn"> 
+      <div class="hold-fill" id="hfill"></div> 
+      <div class="hold-txt"> 
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 
+14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 
+1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.6
+53-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.49 7.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.17
+3-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 
+1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 
+1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 
+2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 
+7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 
+9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 
+2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 
+9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 
+2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 
+1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>         HOLD TO START AUDIT 
+      </div> 
+    </div> 
+    <span class="hold-hint">Hold 3 seconds · Opens WhatsApp</span>   </div> 
+  <div class="stats-row rv"> 
+    <div><div class="stat-n">50+</div><div class="stat-l">Happy Clients</div></div> 
+    <div class="sdiv"></div> 
+    <div><div class="stat-n">4.9★</div><div class="stat-l">Client Rating</div></div> 
+    <div class="sdiv"></div> 
+    <div><div class="stat-n">48h</div><div class="stat-l">Avg Delivery</div></div> 
+  </div> 
 </div>
-
-<div class="ov" id="ov" onclick="closeSb()"></div>
-
-<!-- Sidebar -->
-<aside id="sb">
-  <div class="sb-head">
-    <span class="logo" style="font-size:1.05rem;">Caption <em>Studio</em></span>
-    <button onclick="closeSb()" class="icon-btn" style="width:32px;height:32px;font-size:.75rem;">✕</button>
-  </div>
-  <nav class="sb-nav">
-    <a href="#home" onclick="closeSb()">Home</a>
-    <a href="#pricing" onclick="closeSb()">Pricing</a>
-    <a href="#services" onclick="closeSb()">Services</a>
-    <a href="#process" onclick="closeSb()">Process</a>
-    <a href="#proof" onclick="closeSb()">Evidence</a>
-    <a href="#portfolio" onclick="closeSb()">Portfolio</a>
-    <a href="#faq" onclick="closeSb()">FAQ</a>
-  </nav>
-  <div class="sb-foot">
-    <a href="https://wa.me/919918996096?text=Free%20Caption" class="sb-wa-btn" target="_blank" rel="noopener" onclick="closeSb()">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      Free Caption
-    </a>
-    <div class="sb-founder">
-      <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" alt="Ansh Yadav" loading="lazy">
-      <div>
-        <div style="font-weight:700;font-size:.8rem;">Ansh Yadav</div>
-        <div style="font-size:.58rem;color:var(--muted);letter-spacing:1px;margin-top:2px;">Founder & Strategist</div>
-      </div>
-    </div>
-  </div>
-</aside>
-
-<!-- Header -->
-<header id="hdr">
-  <a href="#home" class="logo">Caption <em>Studio</em></a>
-  <nav>
-    <a href="#pricing">Pricing</a>
-    <a href="#services">Services</a>
-    <a href="#proof">Evidence</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="https://wa.me/919918996096?text=Hey%20I%20want%20a%20free%20demo" class="nav-cta" target="_blank" rel="noopener">Book Demo</a>
-  </nav>
-  <div class="hdr-r">
-    <button class="icon-btn" id="tbtn" onclick="toggleTheme()" aria-label="Toggle theme"><span id="ti">🌙</span></button>
-    <button class="icon-btn menu-btn" onclick="openSb()" aria-label="Menu">
-      <svg width="17" height="12" viewBox="0 0 17 12" fill="none"><rect y="0" width="17" height="1.5" rx=".75" fill="currentColor"/><rect y="5.25" width="17" height="1.5" rx=".75" fill="currentColor"/><rect y="10.5" width="17" height="1.5" rx=".75" fill="currentColor"/></svg>
-    </button>
-  </div>
-</header>
-
-<main>
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="hero-grid"></div>
-  <div class="hero-orb" style="width:480px;height:480px;top:-20%;right:-8%;background:radial-gradient(circle,rgba(201,168,76,.14) 0%,transparent 70%);"></div>
-  <div class="hero-orb" style="width:340px;height:340px;bottom:5%;left:-6%;background:radial-gradient(circle,rgba(140,80,10,.1) 0%,transparent 70%);animation-delay:-7s;"></div>
-  <!-- Decorative corners -->
-  <div style="position:absolute;top:calc(var(--hh) + 16px);right:5%;width:100px;height:100px;border-top:1px solid rgba(201,168,76,.18);border-right:1px solid rgba(201,168,76,.18);pointer-events:none;z-index:1;"></div>
-
-  <div class="hero-inner">
-    <div class="tag">Premium Agency · Est. 2024</div>
-    <h1 class="hh">Get Your Business<br><em>Online</em><br><strong>Today.</strong></h1>
-    <p class="hero-sub">Affordable, fast & beginner-friendly websites. Starting ₹999. No hidden charges, no drama — just results.</p>
-    <div class="hero-btns">
-      <a href="https://wa.me/919918996096?text=Hey%20Ansh%2C%20I%20want%20a%20free%20demo!" class="btn-g" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Book Free Demo
-      </a>
-      <a href="#proof" class="btn-o">See Our Work ↓</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-n">₹999</div><div class="hero-stat-l">Starts From</div></div>
-      <div class="hero-stat"><div class="hero-stat-n">48hrs</div><div class="hero-stat-l">Delivery</div></div>
-      <div class="hero-stat"><div class="hero-stat-n">50+</div><div class="hero-stat-l">Clients</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="mq">
-  <div class="mq-track">
-    <div class="mq-item">Websites from ₹999 <b>✦</b></div><div class="mq-item">No Hidden Charges <b>✦</b></div><div class="mq-item">48 Hour Delivery <b>✦</b></div><div class="mq-item">Free Domain Guidance <b>✦</b></div><div class="mq-item">Mobile First <b>✦</b></div><div class="mq-item">Beginner Friendly <b>✦</b></div><div class="mq-item">WhatsApp Support <b>✦</b></div><div class="mq-item">SEO Optimised <b>✦</b></div>
-    <div class="mq-item">Websites from ₹999 <b>✦</b></div><div class="mq-item">No Hidden Charges <b>✦</b></div><div class="mq-item">48 Hour Delivery <b>✦</b></div><div class="mq-item">Free Domain Guidance <b>✦</b></div><div class="mq-item">Mobile First <b>✦</b></div><div class="mq-item">Beginner Friendly <b>✦</b></div><div class="mq-item">WhatsApp Support <b>✦</b></div><div class="mq-item">SEO Optimised <b>✦</b></div>
-  </div>
+</main> 
+ 
+<!-- ===== RAZORPAY PAYMENT ===== --> 
+<div class="pay-section" id="pay"> 
+  <div class="pay-inner"> 
+    <div class="lbl rv" style="justify-content:center;">Secure Payment</div> 
+    <h2 class="st rv" style="text-align:center;">Pay Online.<br><em>Instant 
+Confirmation.</em></h2> 
+    <p class="rv" style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:10px;line-height:1.7;" >100% secure payments via Razorpay. UPI, Cards, Net Banking — sab accept hota hai.</p> 
+ 
+    <div class="pay-grid"> 
+      <!-- Starter --> 
+      <div class="pay-card rv"> 
+        <div class="pay-plan-name">Starter</div> 
+        <div class="pay-amount">₹999</div> 
+        <div class="pay-desc">Single landing page</div> 
+        <button class="pay-btn" onclick="initPay(999,'Starter Landing Page - Caption Studio')"> 
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 
+4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 
+14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> 
+          Pay Now 
+        </button> 
+        <div class="pay-secure">🔒 Secured by Razorpay</div> 
+      </div> 
+      <!-- Essential --> 
+      <div class="pay-card featured-pay rv d1"> 
+        <div class="pay-plan-name" style="color:var(--gold);">Essential ⭐</div> 
+        <div class="pay-amount">₹2,999</div> 
+        <div class="pay-desc">2–3 page business site</div> 
+        <button class="pay-btn" onclick="initPay(2999,'Essential Business Site - Caption Studio')"> 
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 
+4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 
+14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> 
+          Pay Now 
+        </button> 
+        <div class="pay-secure">🔒 Secured by Razorpay</div> 
+      </div> 
+      <!-- Premium --> 
+      <div class="pay-card rv d2"> 
+        <div class="pay-plan-name">Premium</div> 
+        <div class="pay-amount">₹4,999<span style="font-size:1.2rem;">+</span></div> 
+        <div class="pay-desc">Full business website</div> 
+        <button class="pay-btn" onclick="initPay(4999,'Premium Website - Caption Studio')">           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 
+4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 
+14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> 
+          Pay Now 
+        </button> 
+        <div class="pay-secure">🔒 Secured by Razorpay</div> 
+      </div> 
+    </div> 
+ 
+    <!-- Payment methods visual --> 
+    <div class="rv" style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;flex-wr ap:wrap;">       <span 
+style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--muted);text-transfo rm:uppercase;">Accepted:</span> 
+      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(-
+-bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">UPI</span> 
+      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(-bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Debit 
+Card</span> 
+      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(-bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Credit 
+Card</span> 
+      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(-bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Net 
+Banking</span> 
+      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(-
+-bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Wallets</span>     </div> 
+ 
+    <div class="pay-note rv"> 
+      <p> 
+        <strong>⚠ Important:</strong> Please read our <button onclick="openModal('refund')" style="background:none;border:none;cursor:pointer;color:var(--gold);font-family:var(--fm);fon t-size:.58rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:underline;">No 
+Refund Policy</button> before making payment. &nbsp;·&nbsp; 
+        Payment confirmation via WhatsApp within 30 minutes. &nbsp;·&nbsp;         Work starts within 24 hours of payment. 
+      </p> 
+    </div> 
+  </div> 
 </div>
-
-<!-- HOOK BAND -->
-<div class="hook-band">
-  <div class="hg">
-    <div class="hi rv"><span class="hn">₹999</span><span class="hl">Starter Price</span><p class="hd">Single page landing site for local shops, freelancers & campaigns.</p></div>
-    <div class="hi rv d1"><span class="hn">48hrs</span><span class="hl">Fast Delivery</span><p class="hd">Your site goes live in under 2 days. Speed is our promise.</p></div>
-    <div class="hi rv d2"><span class="hn">0</span><span class="hl">Hidden Charges</span><p class="hd">What we quote is what you pay. No surprises, ever.</p></div>
-  </div>
-</div>
-
-<!-- TRUST TAGS -->
-<div class="trust-strip">
-  <span class="trust-tag">✓ No Hidden Charges</span>
-  <span class="trust-tag">✓ Free Domain Guidance</span>
-  <span class="trust-tag">✓ WhatsApp Support</span>
-  <span class="trust-tag">✓ Beginner Friendly</span>
-  <span class="trust-tag">✓ 30-Day Free Support</span>
-  <span class="trust-tag">✓ Mobile Responsive</span>
-</div>
-
-<!-- BRAND POSTER -->
-<div class="poster-wrap rv" style="margin-top:48px;">
-  <div class="poster">
-    <div class="poster-text">
-      <div class="poster-sub">Growth-Oriented · Affordable · Fast</div>
-      <h2 class="poster-h">Get Your Business<br><em>Online Today.</em></h2>
-      <p class="poster-p">Beginner se lekar growing business tak — hum aapko support karte hain. Affordable pricing, express delivery, zero hidden fees.</p>
-      <div class="poster-pills">
-        <div class="poster-pill"><div class="poster-pill-t">AFFORDABLE</div><div class="poster-pill-s">Pricing</div></div>
-        <div class="poster-pill"><div class="poster-pill-t">EXPRESS</div><div class="poster-pill-s">Delivery</div></div>
-        <div class="poster-pill"><div class="poster-pill-t">ZERO</div><div class="poster-pill-s">Hidden Fees</div></div>
-      </div>
-    </div>
-    <div class="poster-card">
-      <span style="font-size:2.2rem;">💎</span>
-      <div style="font-family:var(--fm);font-size:.52rem;color:var(--gold);margin-top:8px;letter-spacing:3px;">CAPTION STUDIO</div>
-      <div style="font-family:var(--fm);font-size:.46rem;color:var(--muted);margin-top:3px;letter-spacing:2px;">EST. 2024</div>
-    </div>
-  </div>
-</div>
-
-<!-- PRICING -->
-<div class="sec" id="pricing">
-  <div class="lbl rv">Pricing</div>
-  <h2 class="st rv">Plans for every<br><em>stage of growth.</em></h2>
-  <p class="rv" style="color:var(--muted);font-size:.85rem;margin-top:10px;max-width:480px;line-height:1.7;">No hidden charges. No surprises. Just the price we quote.</p>
-  <div class="pricing-grid">
-    <div class="price-card rv">
-      <div class="price-plan">Starter</div>
-      <div class="price-n">₹999</div>
-      <div class="price-sub">Single landing page</div>
-      <div class="price-div"></div>
-      <ul class="price-feat">
-        <li><span class="chk">✓</span> 1 Page Website</li>
-        <li><span class="chk">✓</span> Mobile Responsive</li>
-        <li><span class="chk">✓</span> WhatsApp Button</li>
-        <li><span class="chk">✓</span> Free Domain Guidance</li>
-        <li><span class="chk">✓</span> No Hidden Charges</li>
-      </ul>
-      <a href="https://wa.me/919918996096?text=Starter%20Plan%20-%20999" class="btn-o" style="width:100%;justify-content:center;font-size:.66rem;" target="_blank" rel="noopener">Get Started →</a>
-    </div>
-    <div class="price-card featured rv d1">
-      <div class="price-badge">Most Popular</div>
-      <div class="price-plan" style="color:var(--gold);">Essential ⭐</div>
-      <div class="price-n">₹2,999</div>
-      <div class="price-sub">2–3 page business site</div>
-      <div class="price-div" style="background:var(--gold-b);"></div>
-      <ul class="price-feat">
-        <li><span class="chk">✓</span> Home, Services, Contact</li>
-        <li><span class="chk">✓</span> Mobile + SEO Ready</li>
-        <li><span class="chk">✓</span> WhatsApp Integration</li>
-        <li><span class="chk">✓</span> Free Domain Guidance</li>
-        <li><span class="chk">✓</span> 15-Day Support</li>
-      </ul>
-      <a href="https://wa.me/919918996096?text=Essential%20Plan%20-%202999" class="btn-g" style="width:100%;justify-content:center;font-size:.66rem;" target="_blank" rel="noopener">Best Value →</a>
-    </div>
-    <div class="price-card rv d2">
-      <div class="price-plan">Premium</div>
-      <div class="price-n">₹4,999<span style="font-size:1.3rem;">+</span></div>
-      <div class="price-sub">Full business website</div>
-      <div class="price-div"></div>
-      <ul class="price-feat">
-        <li><span class="chk">✓</span> 5+ Pages, Custom Design</li>
-        <li><span class="chk">✓</span> Advanced SEO & Analytics</li>
-        <li><span class="chk">✓</span> E-Commerce / Booking</li>
-        <li><span class="chk">✓</span> Free Domain Guidance</li>
-        <li><span class="chk">✓</span> 30-Day Priority Support</li>
-      </ul>
-      <a href="https://wa.me/919918996096?text=Premium%20Plan%20inquiry" class="btn-o" style="width:100%;justify-content:center;font-size:.66rem;" target="_blank" rel="noopener">Let's Talk →</a>
-    </div>
-  </div>
-  <div class="price-trust rv" style="margin-top:20px;">
-    <p><span>✓</span> No Hidden Charges &nbsp;·&nbsp; <span>✓</span> Free Domain Guidance &nbsp;·&nbsp; <span>✓</span> WhatsApp Support &nbsp;·&nbsp; <span>✓</span> Beginner Friendly</p>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<div class="sec" id="services">
-  <div class="lbl rv">What We Do</div>
-  <h2 class="st rv">Everything your brand<br><em>needs to grow.</em></h2>
-  <div class="svc-grid">
-    <div class="svc rv"><span class="svc-n">01</span><span class="svc-ico">🖥️</span><div class="svc-name">Website Design</div><p class="svc-desc">Glassmorphism, Matte Black, Neomorphism — every UI element engineered to build trust and drive action.</p></div>
-    <div class="svc rv d1"><span class="svc-n">02</span><span class="svc-ico">✍️</span><div class="svc-name">Caption Ghostwriting</div><p class="svc-desc">Psychological hooks and neuromarketing copy. Turns your Instagram into a high-ticket client magnet.</p></div>
-    <div class="svc rv d2"><span class="svc-n">03</span><span class="svc-ico">👑</span><div class="svc-name">Personal Brand Systems</div><p class="svc-desc">Full authority positioning. Content pillars to bio optimization. From creator to Category King.</p></div>
-    <div class="svc rv"><span class="svc-n">04</span><span class="svc-ico">⚡</span><div class="svc-name">Landing Pages</div><p class="svc-desc">High-conversion landing pages for offers, ads, and funnels. Every click counts.</p></div>
-    <div class="svc rv d1"><span class="svc-n">05</span><span class="svc-ico">🔍</span><div class="svc-name">SEO & Performance</div><p class="svc-desc">Optimized for Google from day one. Fast loading, clean code, mobile-first.</p></div>
-    <div class="svc rv d2"><span class="svc-n">06</span><span class="svc-ico">🛡️</span><div class="svc-name">30-Day Support</div><p class="svc-desc">Updates, tweaks, edits — 30 days of dedicated support included in every package.</p></div>
-  </div>
-</div>
-
-<!-- PROCESS -->
-<div class="sec" id="process">
-  <div class="lbl rv">How We Work</div>
-  <h2 class="st rv">Brief to <em>live</em><br>in 48 hours.</h2>
-  <div class="proc-wrap">
-    <div>
-      <div class="proc-item rv sel" onclick="setPv('🔍','Discovery Call','We audit your brand, goals, and audience. 30-minute call — no fluff, all clarity.',this)">
-        <div class="pn">01</div><div class="pc"><h3>Discovery Call</h3><p>We audit your brand and audience. 30-minute call, all clarity.</p></div>
-      </div>
-      <div class="proc-item rv d1" onclick="setPv('⚡','Design Sprint','Wireframes approved in 4 hours. Then we build. No delays.',this)">
-        <div class="pn">02</div><div class="pc"><h3>Design Sprint</h3><p>Wireframes approved in 4 hours. Then we build. No delays.</p></div>
-      </div>
-      <div class="proc-item rv d2" onclick="setPv('🚀','Build & Optimize','Code-clean, SEO-ready, blazing fast. PageSpeed 90+ is our baseline.',this)">
-        <div class="pn">03</div><div class="pc"><h3>Build & Optimize</h3><p>Code-clean, SEO-ready, blazing fast. PageSpeed 90+.</p></div>
-      </div>
-      <div class="proc-item rv d3" onclick="setPv('💰','Launch & Scale','Go live with analytics, WhatsApp CTA, and pixels in place.',this)">
-        <div class="pn">04</div><div class="pc"><h3>Launch & Scale</h3><p>Go live with analytics, WhatsApp CTA, and pixels. Revenue from day one.</p></div>
-      </div>
-    </div>
-    <div class="proc-vis">
-      <span class="pvi" id="pvi">🔍</span>
-      <h3 id="pvt" style="font-family:var(--fd);font-size:1.55rem;margin-bottom:8px;">Discovery Call</h3>
-      <p id="pvd" style="color:var(--muted);font-size:.82rem;line-height:1.7;">We audit your brand, goals, and audience. 30-minute call — no fluff, all clarity.</p>
-      <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-        <a href="https://wa.me/919918996096?text=I%20want%20to%20start" class="btn-g" style="width:100%;justify-content:center;" target="_blank" rel="noopener">Start Now →</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PROOF -->
-<div class="sec" id="proof">
-  <div class="lbl rv">Real Results</div>
-  <h2 class="st rv">Numbers that<br><em>prove it.</em></h2>
-  <div class="proof-grid">
-    <div class="proof-card rv">
-      <img src="https://i.ibb.co/jPkgSvP8/Screenshot-2026-03-15-10-35-56-52-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" class="proof-img" loading="lazy" alt="Instagram reach">
-      <div class="proof-info"><div><div class="proof-stat">+48.4K</div><div class="proof-lbl">Accounts Reached</div></div><div class="proof-badge">Verified ✓</div></div>
-    </div>
-    <div class="proof-card rv d1">
-      <img src="https://i.ibb.co/Tx37X7Qh/Screenshot-2026-03-15-10-35-33-85-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" class="proof-img" loading="lazy" alt="Instagram growth">
-      <div class="proof-info"><div><div class="proof-stat">2100%</div><div class="proof-lbl">Follower Growth</div></div><div class="proof-badge">Real Data ✓</div></div>
-    </div>
-    <div class="proof-card rv d2">
-      <img src="https://i.ibb.co/jv2F8hjB/Screenshot-2026-03-13-11-28-24-56-40deb401b9ffe8e1df2f1cc5ba480b12.jpg" class="proof-img" loading="lazy" alt="Engagement proof">
-      <div class="proof-info"><div><div class="proof-stat">↑ Reach</div><div class="proof-lbl">Engagement Lift</div></div><div class="proof-badge">Client ✓</div></div>
-    </div>
-    <!-- FOUNDER CARD — FIXED: proper img display, no crop -->
-    <div class="founder-card rv d3">
-      <div class="founder-img-wrap">
-        <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" alt="Ansh Yadav — Founder Caption Studio" loading="lazy">
-      </div>
-      <div class="proof-info"><div><div class="proof-stat">Ansh Yadav</div><div class="proof-lbl">Founder & Lead Strategist</div></div><div class="proof-badge">50+ Clients ✓</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- PORTFOLIO -->
-<div class="sec" id="portfolio">
-  <div class="lbl rv">Our Work</div>
-  <h2 class="st rv">Websites we<br><em>design & build.</em></h2>
-  <div class="port-grid">
-    <div class="port-card rv">
-      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#0f0c08,#1a100a);"><div style="width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#8B4513,#D4A44C);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">☕</div><div class="mbar" style="background:#D4A44C;opacity:.7;width:60px;"></div><div class="mbar" style="background:rgba(255,255,255,.15);width:44px;"></div><div class="mrow" style="margin-top:5px;"><div class="mcard" style="height:22px;background:rgba(212,164,76,.12);border:1px solid rgba(212,164,76,.2);"></div><div class="mcard" style="height:22px;background:rgba(212,164,76,.12);border:1px solid rgba(212,164,76,.2);"></div></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=cafe+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine ↗</a></div></div></div>
-      <div class="port-info"><div class="port-tag">Restaurant · F&amp;B</div><div class="port-name">Cafe & Restaurant</div><div class="port-desc">Menu, booking, WhatsApp orders</div></div>
-    </div>
-    <div class="port-card rv d1">
-      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#090914,#0d0d22);"><img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" alt="Portfolio mockup" style="width:34px;height:34px;border-radius:50%;border:2px solid rgba(201,168,76,.4);object-fit:cover;object-position:top;"><div class="mbar" style="background:var(--gold);opacity:.7;width:56px;"></div><div class="mbar" style="background:rgba(255,255,255,.1);width:72px;"></div><div class="mrow" style="margin-top:6px;"><div class="mcard" style="height:18px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);"></div><div class="mcard" style="height:18px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);"></div><div class="mcard" style="height:18px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.15);"></div></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=portfolio+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine ↗</a></div></div></div>
-      <div class="port-info"><div class="port-tag">Personal · Freelancer</div><div class="port-name">Portfolio Website</div><div class="port-desc">Projects, skills, contact form</div></div>
-    </div>
-    <div class="port-card rv d2">
-      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#080810,#141428);"><div style="font-family:'Cormorant Garamond',serif;font-size:.82rem;color:rgba(201,168,76,.8);letter-spacing:2px;">Launch Now</div><div class="mbar" style="background:rgba(255,255,255,.8);height:6px;width:68px;border-radius:4px;"></div><div class="mbar" style="background:rgba(255,255,255,.18);width:82px;height:4px;"></div><div style="height:20px;width:72px;border-radius:4px;background:linear-gradient(90deg,#c9a84c,#e8c97a);margin-top:7px;"></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=landing+page" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine ↗</a></div></div></div>
-      <div class="port-info"><div class="port-tag">Ads · Funnels</div><div class="port-name">Landing Page</div><div class="port-desc">High-converting, built for ad traffic</div></div>
-    </div>
-    <div class="port-card rv">
-      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#0a0a0a,#181210);"><div style="width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#c9a84c,#8B6914);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">👑</div><div class="mbar" style="background:rgba(201,168,76,.7);width:58px;"></div><div class="mbar" style="background:rgba(255,255,255,.12);width:78px;"></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=brand+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine ↗</a></div></div></div>
-      <div class="port-info"><div class="port-tag">Personal Brand · Coach</div><div class="port-name">Brand Website</div><div class="port-desc">Authority positioning, client magnet</div></div>
-    </div>
-    <div class="port-card rv d1">
-      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#080f08,#0d1a0d);"><div class="mrow"><div style="flex:1;height:36px;border-radius:5px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;">🛍️</div><div style="flex:1;height:36px;border-radius:5px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;">👟</div></div><div class="mbar" style="background:rgba(16,185,129,.6);width:60px;height:4px;"></div><div style="height:18px;width:68px;border-radius:4px;background:rgba(16,185,129,.7);font-size:.5rem;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">BUY NOW</div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=ecommerce+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine ↗</a></div></div></div>
-      <div class="port-info"><div class="port-tag">E-Commerce · Store</div><div class="port-name">Online Shop</div><div class="port-desc">Catalog, cart, payment integration</div></div>
-    </div>
-    <div class="port-card rv d2">
-      <div class="port-screen"><div class="port-bar"><div class="dot" style="background:#ff5f57;"></div><div class="dot" style="background:#ffbd2e;"></div><div class="dot" style="background:#28ca41;"></div></div><div class="port-body"><div class="mock" style="background:linear-gradient(135deg,#080a14,#0a0d1e);"><div class="mrow" style="margin-bottom:4px;"><div class="mcard" style="height:18px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2);"></div><div class="mcard" style="height:18px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2);"></div><div class="mcard" style="height:18px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.2);"></div></div><div style="height:36px;width:100%;border-radius:6px;background:linear-gradient(135deg,rgba(99,102,241,.2),rgba(139,92,246,.15));border:1px solid rgba(99,102,241,.2);"></div><div style="display:flex;gap:5px;margin-top:5px;"><div style="height:14px;width:44px;border-radius:3px;background:rgba(99,102,241,.7);"></div><div style="height:14px;width:44px;border-radius:3px;background:rgba(255,255,255,.06);border:1px solid rgba(99,102,241,.2);"></div></div></div><div class="port-ov"><a href="https://wa.me/919918996096?text=agency+website" class="btn-g" style="font-size:.64rem;padding:10px 18px;" target="_blank" rel="noopener">Build Mine ↗</a></div></div></div>
-      <div class="port-info"><div class="port-tag">SaaS · Agency</div><div class="port-name">Agency / SaaS Site</div><div class="port-desc">Dashboard feel, glassmorphism UI</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- TESTIMONIAL -->
-<div class="testi">
-  <div class="testi-inner">
-    <div class="lbl rv" style="justify-content:center;">Social Proof</div>
-    <blockquote class="tq rv">"Ansh delivered the entire website in under 48 hours. The design was beyond what I imagined — and the WhatsApp leads started coming in the same week."</blockquote>
-    <div class="tauth rv">
-      <img src="https://i.ibb.co/dwhXTRz6/ansh.jpg" class="tav" alt="Client" loading="lazy">
-      <div><div style="font-weight:700;font-size:.82rem;">Early Client</div><div style="font-size:.64rem;color:var(--muted);letter-spacing:1px;margin-top:2px;">Founder · Local Business · Delhi NCR</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ -->
-<div class="sec" id="faq">
-  <div class="lbl rv">FAQs</div>
-  <h2 class="st rv">Common<br><em>questions.</em></h2>
-  <div class="faq-list">
-    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">How much does a website cost? <div class="faq-ico">+</div></div><div class="faq-a">Starting at ₹999 for a landing page. Essential 2–3 page site at ₹2,999. Full business websites from ₹4,999. All packages include mobile optimization, SEO, and support. No hidden charges.</div></div>
-    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Can you really deliver in 48 hours? <div class="faq-ico">+</div></div><div class="faq-a">Yes — for starter and essential sites. The clock starts once you approve the wireframe. Complex builds take 3–5 days but we always set clear timelines.</div></div>
-    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Do you also handle Instagram content? <div class="faq-ico">+</div></div><div class="faq-a">Yes. Caption ghostwriting, content strategy, hook engineering — our core offer alongside websites.</div></div>
-    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">Will the site work on mobile? <div class="faq-ico">+</div></div><div class="faq-a">100% mobile-first. Tested across iOS, Android, and all screen sizes. Google PageSpeed 90+ is our standard.</div></div>
-    <div class="faq-item rv"><div class="faq-q" onclick="toggleFaq(this)">How do I get started? <div class="faq-ico">+</div></div><div class="faq-a">Hit the WhatsApp button and say "Free Demo." We'll schedule a 30-minute call and share a proposal the same day. Zero pressure.</div></div>
-  </div>
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <div class="lbl rv" style="justify-content:center;">Start Today</div>
-  <h2 class="cta-h rv">Ready to get<br><em>online today?</em></h2>
-  <p class="rv" style="color:var(--muted);font-size:.88rem;max-width:400px;margin:14px auto 0;line-height:1.75;">₹999 · 48 hours · No hidden charges. Hold the button to start your free audit.</p>
-  <div class="hold-wrap rv">
-    <div class="hold-btn" id="hbtn">
-      <div class="hold-fill" id="hfill"></div>
-      <div class="hold-txt">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        HOLD TO START AUDIT
-      </div>
-    </div>
-    <span class="hold-hint">Hold 3 seconds · Opens WhatsApp</span>
-  </div>
-  <div class="stats-row rv">
-    <div><div class="stat-n">50+</div><div class="stat-l">Happy Clients</div></div>
-    <div class="sdiv"></div>
-    <div><div class="stat-n">4.9★</div><div class="stat-l">Client Rating</div></div>
-    <div class="sdiv"></div>
-    <div><div class="stat-n">48h</div><div class="stat-l">Avg Delivery</div></div>
-  </div>
-</div>
-</main>
-
-<!-- ===== RAZORPAY PAYMENT ===== -->
-<div class="pay-section" id="pay">
-  <div class="pay-inner">
-    <div class="lbl rv" style="justify-content:center;">Secure Payment</div>
-    <h2 class="st rv" style="text-align:center;">Pay Online.<br><em>Instant Confirmation.</em></h2>
-    <p class="rv" style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:10px;line-height:1.7;">100% secure payments via Razorpay. UPI, Cards, Net Banking — sab accept hota hai.</p>
-
-    <div class="pay-grid">
-      <!-- Starter -->
-      <div class="pay-card rv">
-        <div class="pay-plan-name">Starter</div>
-        <div class="pay-amount">₹999</div>
-        <div class="pay-desc">Single landing page</div>
-        <button class="pay-btn" onclick="initPay(999,'Starter Landing Page - Caption Studio')">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-          Pay Now
-        </button>
-        <div class="pay-secure">🔒 Secured by Razorpay</div>
-      </div>
-      <!-- Essential -->
-      <div class="pay-card featured-pay rv d1">
-        <div class="pay-plan-name" style="color:var(--gold);">Essential ⭐</div>
-        <div class="pay-amount">₹2,999</div>
-        <div class="pay-desc">2–3 page business site</div>
-        <button class="pay-btn" onclick="initPay(2999,'Essential Business Site - Caption Studio')">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-          Pay Now
-        </button>
-        <div class="pay-secure">🔒 Secured by Razorpay</div>
-      </div>
-      <!-- Premium -->
-      <div class="pay-card rv d2">
-        <div class="pay-plan-name">Premium</div>
-        <div class="pay-amount">₹4,999<span style="font-size:1.2rem;">+</span></div>
-        <div class="pay-desc">Full business website</div>
-        <button class="pay-btn" onclick="initPay(4999,'Premium Website - Caption Studio')">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
-          Pay Now
-        </button>
-        <div class="pay-secure">🔒 Secured by Razorpay</div>
-      </div>
-    </div>
-
-    <!-- Payment methods visual -->
-    <div class="rv" style="display:flex;align-items:center;justify-content:center;gap:16px;margin-top:28px;flex-wrap:wrap;">
-      <span style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;">Accepted:</span>
-      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">UPI</span>
-      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Debit Card</span>
-      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Credit Card</span>
-      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Net Banking</span>
-      <span style="font-family:var(--fu);font-size:.72rem;font-weight:700;color:var(--text);background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:5px 12px;">Wallets</span>
-    </div>
-
-    <div class="pay-note rv">
-      <p>
-        <strong>⚠ Important:</strong> Please read our <button onclick="openModal('refund')" style="background:none;border:none;cursor:pointer;color:var(--gold);font-family:var(--fm);font-size:.58rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:underline;">No Refund Policy</button> before making payment. &nbsp;·&nbsp;
-        Payment confirmation via WhatsApp within 30 minutes. &nbsp;·&nbsp;
-        Work starts within 24 hours of payment.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- ===== PRIVACY POLICY MODAL ===== -->
-<div class="modal-overlay" id="modal-privacy" onclick="closeModalOutside(event,'modal-privacy')">
-  <div class="modal-box">
-    <div class="modal-drag"></div>
-    <div class="modal-head">
-      <span class="modal-title">Privacy Policy</span>
-      <button class="modal-close" onclick="closeModal('privacy')">✕</button>
-    </div>
-    <div class="modal-body">
-      <p style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Last Updated: March 2026</p>
-
-      <h3>1. Information We Collect</h3>
-      <p>When you contact us via WhatsApp, phone, or this website, we collect your name, phone number, and any project details you share voluntarily. We do not collect any information automatically unless you fill out a form.</p>
-
-      <h3>2. How We Use Your Information</h3>
-      <ul>
-        <li>To understand your project requirements and provide a proposal</li>
-        <li>To communicate project updates and delivery via WhatsApp</li>
-        <li>To send payment confirmation and invoice</li>
-        <li>We do NOT sell, rent, or share your data with any third parties</li>
-      </ul>
-
-      <h3>3. Payment Data</h3>
-      <p>All payments are processed by Razorpay — a PCI-DSS compliant payment gateway. Caption Studio does not store any card or banking information. Razorpay's privacy policy governs payment data.</p>
-
-      <h3>4. Data Storage</h3>
-      <p>Your contact information is stored securely and used only for project communication. We retain project-related data for up to 1 year for reference and support purposes.</p>
-
-      <h3>5. Your Rights</h3>
-      <p>You can request deletion of your data at any time by contacting us on WhatsApp at +91 9918996096. We will remove your information within 7 working days.</p>
-
-      <h3>6. Cookies</h3>
-      <p>This website does not use tracking cookies or advertising pixels. We do not run remarketing campaigns on this site.</p>
-
-      <h3>7. Contact</h3>
-      <p>For any privacy concerns, contact Ansh Yadav at: <strong style="color:var(--gold);">+91 9918996096</strong> or Instagram: @captionstudi.o</p>
-    </div>
-  </div>
-</div>
-
-<!-- ===== NO REFUND POLICY MODAL ===== -->
-<div class="modal-overlay" id="modal-refund" onclick="closeModalOutside(event,'modal-refund')">
-  <div class="modal-box">
-    <div class="modal-drag"></div>
-    <div class="modal-head">
-      <span class="modal-title">Refund Policy</span>
-      <button class="modal-close" onclick="closeModal('refund')">✕</button>
-    </div>
-    <div class="modal-body">
-      <p style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Last Updated: March 2026</p>
-
-      <div style="background:rgba(201,168,76,.07);border:1px solid var(--gold-b);border-radius:10px;padding:16px 18px;margin-bottom:20px;">
-        <p style="color:var(--text);font-weight:700;font-size:.85rem;margin-bottom:4px;">⚠ All Sales Are Final — No Refunds</p>
-        <p style="font-size:.78rem;margin:0;">Once payment is made and work has begun, no refunds will be issued under any circumstances.</p>
-      </div>
-
-      <h3>1. No Refund Policy</h3>
-      <p>Caption Studio operates a strict no-refund policy. All payments made for website design, landing pages, caption writing, or any other services are non-refundable once the project has commenced.</p>
-
-      <h3>2. Why No Refunds?</h3>
-      <p>Our services involve significant time, creativity, and technical effort invested from the moment work begins. The nature of custom digital work means we cannot "return" the work done, making refunds impractical.</p>
-
-      <h3>3. When Does Work Begin?</h3>
-      <ul>
-        <li>Work begins within 24 hours of receiving full or agreed partial payment</li>
-        <li>A confirmation message will be sent via WhatsApp once payment is received</li>
-        <li>By making payment, you agree that work has commenced and no refund is applicable</li>
-      </ul>
-
-      <h3>4. What If I'm Not Satisfied?</h3>
-      <p>We offer unlimited revisions within the agreed project scope during the delivery period. If you are not satisfied, we will work with you to make changes. We do NOT offer refunds as an alternative to revisions.</p>
-
-      <h3>5. Cancellation Before Work Starts</h3>
-      <p>If you cancel your order before any work has commenced (typically within 2 hours of payment), a 90% refund may be considered at our sole discretion. Contact us immediately on WhatsApp: +91 9918996096.</p>
-
-      <h3>6. Disputes</h3>
-      <p>Any disputes shall be resolved through direct communication on WhatsApp. By making payment, you agree to this refund policy in full.</p>
-
-      <h3>7. Contact</h3>
-      <p>For any concerns before placing an order: <strong style="color:var(--gold);">+91 9918996096</strong></p>
-    </div>
-  </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="foot">
-    <div><div class="fl">Caption <em>Studio</em></div><p style="color:var(--muted);font-size:.74rem;margin-top:6px;">Premium Websites & Personal Branding.</p></div>
-    <div class="flinks">
-      <a href="#pricing">Pricing</a>
-      <a href="#pay">Pay Online</a>
-      <a href="#services">Services</a>
-      <a href="#proof">Proof</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <div class="fsoc">
-      <a href="https://instagram.com/captionstudi.o" class="sb2" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-      <a href="https://wa.me/919918996096" class="sb2" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-    </div>
-  </div>
-  <!-- Policy links -->
-  <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
-    <button onclick="openModal('privacy')" style="background:none;border:none;cursor:pointer;font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</button>
-    <span style="color:var(--border);">·</span>
-    <button onclick="openModal('refund')" style="background:none;border:none;cursor:pointer;font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">No Refund Policy</button>
-    <span style="color:var(--border);">·</span>
-    <a href="#pay" style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--muted);text-transform:uppercase;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Pay Online</a>
-  </div>
-  <div class="fcopy">© 2026 Caption Studio · Ansh Yadav · <span id="clk">00:00:00</span></div>
-</footer>
-
+ 
+<!-- ===== PRIVACY POLICY MODAL ===== --> <div class="modal-overlay" id="modal-privacy" onclick="closeModalOutside(event,'modal-privacy')"> 
+  <div class="modal-box"> 
+    <div class="modal-drag"></div> 
+    <div class="modal-head"> 
+      <span class="modal-title">Privacy Policy</span> 
+      <button class="modal-close" onclick="closeModal('privacy')">✕</button>     </div> 
+    <div class="modal-body"> 
+      <p style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--gold);text-transfor m:uppercase;">Last Updated: March 2026</p> 
+ 
+      <h3>1. Information We Collect</h3> 
+      <p>When you contact us via WhatsApp, phone, or this website, we collect your name, phone number, and any project details you share voluntarily. We do not collect any information automatically unless you fill out a form.</p> 
+ 
+      <h3>2. How We Use Your Information</h3> 
+      <ul> 
+        <li>To understand your project requirements and provide a proposal</li> 
+        <li>To communicate project updates and delivery via WhatsApp</li> 
+        <li>To send payment confirmation and invoice</li> 
+        <li>We do NOT sell, rent, or share your data with any third parties</li> 
+      </ul> 
+ 
+      <h3>3. Payment Data</h3> 
+      <p>All payments are processed by Razorpay — a PCI-DSS compliant payment gateway. Caption Studio does not store any card or banking information. Razorpay's privacy policy governs payment data.</p> 
+ 
+      <h3>4. Data Storage</h3> 
+      <p>Your contact information is stored securely and used only for project communication. 
+We retain project-related data for up to 1 year for reference and support purposes.</p> 
+ 
+      <h3>5. Your Rights</h3> 
+      <p>You can request deletion of your data at any time by contacting us on WhatsApp at 
++91 9918996096. We will remove your information within 7 working days.</p> 
+ 
+      <h3>6. Cookies</h3> 
+      <p>This website does not use tracking cookies or advertising pixels. We do not run remarketing campaigns on this site.</p> 
+ 
+      <h3>7. Contact</h3> 
+      <p>For any privacy concerns, contact Ansh Yadav at: <strong style="color:var(--gold);">+91 9918996096</strong> or Instagram: @captionstudi.o</p>     </div> 
+  </div> 
+</div> 
+ 
+<!-- ===== NO REFUND POLICY MODAL ===== --> <div class="modal-overlay" id="modal-refund" onclick="closeModalOutside(event,'modal-refund')"> 
+  <div class="modal-box"> 
+    <div class="modal-drag"></div> 
+    <div class="modal-head"> 
+      <span class="modal-title">Refund Policy</span> 
+      <button class="modal-close" onclick="closeModal('refund')">✕</button>     </div> 
+    <div class="modal-body"> 
+      <p style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--gold);text-transfor m:uppercase;">Last Updated: March 2026</p> 
+ 
+      <div style="background:rgba(201,168,76,.07);border:1px solid var(--gold-b);border-radius:10px;padding:16px 18px;margin-bottom:20px;"> 
+        <p style="color:var(--text);font-weight:700;font-size:.85rem;margin-bottom:4px;">⚠ All 
+Sales Are Final — No Refunds</p> 
+        <p style="font-size:.78rem;margin:0;">Once payment is made and work has begun, no refunds will be issued under any circumstances.</p> 
+      </div> 
+ 
+      <h3>1. No Refund Policy</h3> 
+      <p>Caption Studio operates a strict no-refund policy. All payments made for website design, landing pages, caption writing, or any other services are non-refundable once the project has commenced.</p> 
+ 
+      <h3>2. Why No Refunds?</h3> 
+      <p>Our services involve significant time, creativity, and technical effort invested from the moment work begins. The nature of custom digital work means we cannot "return" the work done, making refunds impractical.</p> 
+ 
+      <h3>3. When Does Work Begin?</h3> 
+      <ul> 
+        <li>Work begins within 24 hours of receiving full or agreed partial payment</li> 
+        <li>A confirmation message will be sent via WhatsApp once payment is received</li>         <li>By making payment, you agree that work has commenced and no refund is applicable</li> 
+      </ul> 
+ 
+      <h3>4. What If I'm Not Satisfied?</h3> 
+      <p>We offer unlimited revisions within the agreed project scope during the delivery period. If you are not satisfied, we will work with you to make changes. We do NOT offer refunds as an alternative to revisions.</p> 
+ 
+      <h3>5. Cancellation Before Work Starts</h3> 
+      <p>If you cancel your order before any work has commenced (typically within 2 hours of payment), a 90% refund may be considered at our sole discretion. Contact us immediately on WhatsApp: +91 9918996096.</p> 
+ 
+      <h3>6. Disputes</h3> 
+      <p>Any disputes shall be resolved through direct communication on WhatsApp. By making payment, you agree to this refund policy in full.</p> 
+ 
+      <h3>7. Contact</h3> 
+      <p>For any concerns before placing an order: <strong style="color:var(--gold);">+91 
+9918996096</strong></p> 
+    </div> 
+  </div> 
+</div> 
+ 
+<!-- FOOTER --> 
+<footer> 
+  <div class="foot"> 
+    <div><div class="fl">Caption <em>Studio</em></div><p 
+style="color:var(--muted);font-size:.74rem;margin-top:6px;">Premium Websites & Personal 
+Branding.</p></div> 
+    <div class="flinks"> 
+      <a href="#pricing">Pricing</a> 
+      <a href="#pay">Pay Online</a> 
+      <a href="#services">Services</a> 
+      <a href="#proof">Proof</a> 
+      <a href="#portfolio">Portfolio</a> 
+      <a href="#faq">FAQ</a> 
+    </div> 
+    <div class="fsoc"> 
+      <a href="https://instagram.com/captionstudi.o" class="sb2" target="_blank" rel="noopener" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 
+4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 
+3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 
+0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 
+0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 
+4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 
+1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 
+1.	281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 
+6.979-6.98.059-1.28.073-1.689.073-4.948 
+0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.94
+9-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 
+6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 
+1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 
+1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 
+1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a> 
+      <a href="https://wa.me/919918996096" class="sb2" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 
+14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 
+1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.6
+53-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.49 7.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.17
+3-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 
+1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 
+1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 
+2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 
+7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 
+9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 
+2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 
+9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 
+2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 
+1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 
+00-3.48-8.413z"/></svg></a> 
+    </div> 
+  </div> 
+  <!-- Policy links --> 
+  <div style="display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:24px;padding-t op:20px;border-top:1px solid var(--border);">     <button onclick="openModal('privacy')" style="background:none;border:none;cursor:pointer;font-family:var(--fm);font-size:.56rem;lett er-spacing:2px;color:var(--muted);text-transform:uppercase;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</button> 
+    <span style="color:var(--border);">·</span>     <button onclick="openModal('refund')" style="background:none;border:none;cursor:pointer;font-family:var(--fm);font-size:.56rem;lett er-spacing:2px;color:var(--muted);text-transform:uppercase;transition:color .3s;" 
+onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">No 
+Refund Policy</button> 
+    <span style="color:var(--border);">·</span> 
+    <a href="#pay" style="font-family:var(--fm);font-size:.56rem;letter-spacing:2px;color:var(--muted);text-transfo rm:uppercase;transition:color .3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--muted)'">Pay Online</a> 
+  </div> 
+  <div class="fcopy">© 2026 Caption Studio · Ansh Yadav · <span id="clk">00:00:00</span></div> 
+</footer> 
+ 
 <script>
-/* CURSOR */
-const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;});
-(function loop(){cur.style.cssText=`left:${mx-4}px;top:${my-4}px;`;rx+=(mx-rx)*.12;ry+=(my-ry)*.12;curR.style.cssText=`left:${rx-16}px;top:${ry-16}px;`;requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.faq-q,.port-card,.proc-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('big');curR.classList.add('big');});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('big');curR.classList.remove('big');});
-});
-
-/* HEADER */
-window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('stuck',window.scrollY>30));
-
-/* SIDEBAR */
-function openSb(){document.getElementById('sb').classList.add('on');document.getElementById('ov').classList.add('on');}
-function closeSb(){document.getElementById('sb').classList.remove('on');document.getElementById('ov').classList.remove('on');}
-
-/* THEME TOGGLE */
-let dark=true;
-function toggleTheme(){
-  dark=!dark;
-  document.body.classList.toggle('light',!dark);
-  const ti=document.getElementById('ti');
-  ti.textContent=dark?'🌙':'☀️';
-  ti.classList.remove('tspin');void ti.offsetWidth;ti.classList.add('tspin');
-}
-
-/* REVEAL — IntersectionObserver */
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('go');obs.unobserve(e.target);}});},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-// Fallback: force-show everything after 2.5s in case observer fails
-setTimeout(()=>{document.querySelectorAll('.rv:not(.go)').forEach(el=>el.classList.add('go'));},2500);
-
-/* FAQ */
-function toggleFaq(el){
-  const item=el.parentElement;
-  document.querySelectorAll('.faq-item.open').forEach(i=>{if(i!==item)i.classList.remove('open');});
-  item.classList.toggle('open');
-}
-
-/* PROCESS */
-function setPv(ico,t,d,el){
-  document.getElementById('pvi').textContent=ico;
-  document.getElementById('pvt').textContent=t;
-  document.getElementById('pvd').textContent=d;
-  document.querySelectorAll('.proc-item').forEach(i=>i.classList.remove('sel'));
-  el.classList.add('sel');
-}
-
-/* HOLD BUTTON */
-const hbtn=document.getElementById('hbtn'),hfill=document.getElementById('hfill');
-let hv=0,ht=null,holding=false;
-function hStart(e){
-  e.preventDefault();if(holding)return;holding=true;
-  ht=setInterval(()=>{
-    hv+=3.35;hfill.style.width=hv+'%';
-    if(hv>=100){clearInterval(ht);holding=false;hv=0;hfill.style.width='0%';
-      window.open('https://wa.me/919918996096?text=Hey%20Ansh%2C%20start%20my%20free%20audit!','_blank','noopener');}
-  },30);
-}
-function hEnd(){clearInterval(ht);holding=false;hv=0;hfill.style.width='0%';}
-hbtn.addEventListener('pointerdown',hStart);
-hbtn.addEventListener('pointerup',hEnd);
-hbtn.addEventListener('pointercancel',hEnd);
-hbtn.addEventListener('pointerleave',hEnd);
-
-/* MODAL */
-function openModal(id){document.getElementById('modal-'+id).classList.add('show');document.body.style.overflow='hidden';}
-function closeModal(id){document.getElementById('modal-'+id).classList.remove('show');document.body.style.overflow='';}
-function closeModalOutside(e,id){if(e.target===document.getElementById('modal-'+id))closeModal(id);}
-
-/* RAZORPAY PAYMENT */
-function initPay(amount, desc){
-  // Check if Razorpay is loaded
-  if(typeof Razorpay === 'undefined'){
-    alert('Payment gateway loading... Please try again in a moment.');
-    return;
-  }
-  const options = {
-    key: 'rzp_live_SRKdGAI5NP3N8r', // ⚠️ REPLACE with your Razorpay Key ID
-    amount: amount * 100, // Razorpay takes paise
-    currency: 'INR',
-    name: 'Caption Studio',
-    description: desc,
-    image: 'https://i.ibb.co/dwhXTRz6/ansh.jpg',
-    handler: function(response){
-      const msg = `Hey Ansh! I just made payment of ₹${amount} for: ${desc}%0APayment ID: ${response.razorpay_payment_id}`;
-      window.open(`https://wa.me/919918996096?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-      alert(`✅ Payment Successful!\n\nPayment ID: ${response.razorpay_payment_id}\n\nAnsh will contact you on WhatsApp within 30 minutes. Work starts within 24 hours!`);
-    },
-    prefill: { name: '', email: '', contact: '' },
-    theme: { color: '#c9a84c' },
-    modal: {
-      ondismiss: function(){ console.log('Payment cancelled'); }
-    }
-  };
-  const rzp = new Razorpay(options);
-  rzp.on('payment.failed', function(resp){
-    alert('Payment failed. Please try again or contact us on WhatsApp: +91 9918996096\nError: ' + resp.error.description);
-  });
-  rzp.open();
-}
-setInterval(()=>{document.getElementById('clk').textContent=new Date().toLocaleTimeString('en-IN',{hour12:false});},1000);
-</script>
-</body>
-</html>
+/* CURSOR */ const cur=document.getElementById('cur'),curR=document.getElementById('cur-r'); let mx=0,my=0,rx=0,ry=0; document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;}); 
+(function 
+loop(){cur.style.cssText=`left:${mx-4}px;top:${my-4}px;`;rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cur R.style.cssText=`left:${rx-16}px;top:${ry-16}px;`;requestAnimationFrame(loop);})(); document.querySelectorAll('a,button,.faq-q,.port-card,.proc-item').forEach(el=>{ 
+  el.addEventListener('mouseenter',()=>{cur.classList.add('big');curR.classList.add('big');}); 
+  
+el.addEventListener('mouseleave',()=>{cur.classList.remove('big');curR.classList.remove('big'
+);}); 
+}); 
+ 
+/* HEADER */ 
+window.addEventListener('scroll',()=>document.getElementById('hdr').classList.toggle('stuck' ,window.scrollY>30)); 
+ 
+/* SIDEBAR */ function openSb(){document.getElementById('sb').classList.add('on');document.getElementById('ov').
+classList.add('on');} function closeSb(){document.getElementById('sb').classList.remove('on');document.getElementById(' ov').classList.remove('on');} 
+ 
+/* THEME TOGGLE */ 
+let dark=true; function toggleTheme(){   dark=!dark;   document.body.classList.toggle('light',!dark);   const ti=document.getElementById('ti');   ti.textContent=dark?'🌙':'☀';   ti.classList.remove('tspin');void ti.offsetWidth;ti.classList.add('tspin'); 
+} 
+ 
+/* REVEAL — IntersectionObserver */ const obs=new 
+IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('go');ob s.unobserve(e.target);}});},{threshold:.06,rootMargin:'0px 0px -20px 0px'}); document.querySelectorAll('.rv').forEach(el=>obs.observe(el)); // Fallback: force-show everything after 2.5s in case observer fails setTimeout(()=>{document.querySelectorAll('.rv:not(.go)').forEach(el=>el.classList.add('go')); },2500); 
+ 
+/* FAQ */ function toggleFaq(el){   const item=el.parentElement; document.querySelectorAll('.faq-item.open').forEach(i=>{if(i!==item)i.classList.remove('open'
+);}); 
+  item.classList.toggle('open'); 
+} 
+ 
+/* PROCESS */ 
+function setPv(ico,t,d,el){   document.getElementById('pvi').textContent=ico;   document.getElementById('pvt').textContent=t;   document.getElementById('pvd').textContent=d;   document.querySelectorAll('.proc-item').forEach(i=>i.classList.remove('sel'));   el.classList.add('sel'); 
+} 
+ 
+/* HOLD BUTTON */ const hbtn=document.getElementById('hbtn'),hfill=document.getElementById('hfill'); let hv=0,ht=null,holding=false; function hStart(e){ 
+  e.preventDefault();if(holding)return;holding=true;   ht=setInterval(()=>{ 
+    hv+=3.35;hfill.style.width=hv+'%'; 
+    if(hv>=100){clearInterval(ht);holding=false;hv=0;hfill.style.width='0%'; 
+      
+window.open('https://wa.me/919918996096?text=Hey%20Ansh%2C%20start%20my%20fre e%20audit!','_blank','noopener');} 
+  },30); 
+} 
+function hEnd(){clearInterval(ht);holding=false;hv=0;hfill.style.width='0%';} hbtn.addEventListener('pointerdown',hStart); hbtn.addEventListener('pointerup',hEnd); hbtn.addEventListener('pointercancel',hEnd); hbtn.addEventListener('pointerleave',hEnd); 
+ 
+/* MODAL */ function openModal(id){document.getElementById('modal-'+id).classList.add('show');document.body.
+style.overflow='hidden';} function closeModal(id){document.getElementById('modal-'+id).classList.remove('show');document.b ody.style.overflow='';} function closeModalOutside(e,id){if(e.target===document.getElementById('modal-'+id))closeModal(id
+);} 
+ 
+/* RAZORPAY PAYMENT */ 
+function initPay(amount, desc){   // Check if Razorpay is loaded   if(typeof Razorpay === 'undefined'){     alert('Payment gateway loading... Please try again in a moment.');     return; 
+  } 
+  const options = {     key: 'rzp_live_SRKdGAI5NP3N8r', // ⚠ REPLACE with your Razorpay Key ID     amount: amount * 100, // Razorpay takes paise     currency: 'INR',     name: 'Caption Studio',     description: desc,     image: 'https://i.ibb.co/dwhXTRz6/ansh.jpg',     handler: function(response){       const msg = `Hey Ansh! I just made payment of ₹${amount} for: ${desc}%0APayment ID: 
+${response.razorpay_payment_id}`;       window.open(`https://wa.me/919918996096?text=${encodeURIComponent(msg)}`, 
+'_blank', 'noopener');       alert(`✅ Payment Successful!\n\nPayment ID: 
+${response.razorpay_payment_id}\n\nAnsh will contact you on WhatsApp within 30 minutes. Work starts within 24 hours!`); 
+    },     prefill: { name: '', email: '', contact: '' },     theme: { color: '#c9a84c' },     modal: {       ondismiss: function(){ console.log('Payment cancelled'); } 
+    } 
+  }; 
+  const rzp = new Razorpay(options);   rzp.on('payment.failed', function(resp){     alert('Payment failed. Please try again or contact us on WhatsApp: +91 9918996096\nError: ' + resp.error.description); 
+  }); 
+  rzp.open(); 
+} 
+setInterval(()=>{document.getElementById('clk').textContent=new 
+Date().toLocaleTimeString('en-IN',{hour12:false});},1000); 
+</script> 
+</body> 
+</html> 
+ 
