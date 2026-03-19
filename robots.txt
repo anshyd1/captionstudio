@@ -1,0 +1,12 @@
+# robots.txt — Caption Studio
+# https://captionstudio.in
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://captionstudio.in/sitemap.xml
+
+# Block unnecessary files from indexing
+Disallow: /cdn-cgi/
+Disallow: /*.json$
